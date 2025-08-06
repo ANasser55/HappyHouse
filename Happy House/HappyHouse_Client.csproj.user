@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Forms\customers_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\home_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\instalment_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ledger_cash_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ledger_expenses_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ledger_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ledger_installments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ledger_transaction_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\new_customer_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\new_installment_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\reports_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\safebox_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\this_month_installments_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

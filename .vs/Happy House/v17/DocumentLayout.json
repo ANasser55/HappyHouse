@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|c:\\users\\a.nasser\\source\\repos\\happyhouse\\happyhouse_backend\\controllers\\customerregistrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|solutionrelative:happyhouse_backend\\controllers\\customerregistrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0231D0D-00C0-4D8A-AD84-A54D674A27C5}|Happy House\\HappyHouse_Client.csproj|c:\\users\\a.nasser\\source\\repos\\happyhouse\\happy house\\forms\\new_customer_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0231D0D-00C0-4D8A-AD84-A54D674A27C5}|Happy House\\HappyHouse_Client.csproj|solutionrelative:happy house\\forms\\new_customer_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|c:\\users\\a.nasser\\source\\repos\\happyhouse\\happyhouse_backend\\services\\customerregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|solutionrelative:happyhouse_backend\\services\\customerregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|c:\\users\\a.nasser\\source\\repos\\happyhouse\\happyhouse_backend\\services\\customersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|solutionrelative:happyhouse_backend\\services\\customersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0231D0D-00C0-4D8A-AD84-A54D674A27C5}|Happy House\\HappyHouse_Client.csproj|C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\happy house\\forms\\new_customer_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0231D0D-00C0-4D8A-AD84-A54D674A27C5}|Happy House\\HappyHouse_Client.csproj|solutionrelative:happy house\\forms\\new_customer_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0231D0D-00C0-4D8A-AD84-A54D674A27C5}|Happy House\\HappyHouse_Client.csproj|c:\\users\\a.nasser\\source\\repos\\happyhouse\\happy house\\forms\\customers_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0231D0D-00C0-4D8A-AD84-A54D674A27C5}|Happy House\\HappyHouse_Client.csproj|solutionrelative:happy house\\forms\\customers_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|c:\\users\\a.nasser\\source\\repos\\happyhouse\\happyhouse_backend\\services\\ledgerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|solutionrelative:happyhouse_backend\\services\\ledgerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0231D0D-00C0-4D8A-AD84-A54D674A27C5}|Happy House\\HappyHouse_Client.csproj|c:\\users\\a.nasser\\source\\repos\\happyhouse\\happy house\\forms\\new_installment_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0231D0D-00C0-4D8A-AD84-A54D674A27C5}|Happy House\\HappyHouse_Client.csproj|solutionrelative:happy house\\forms\\new_installment_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|c:\\users\\a.nasser\\source\\repos\\happyhouse\\happyhouse_backend\\services\\addinstallmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|solutionrelative:happyhouse_backend\\services\\addinstallmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|c:\\users\\a.nasser\\source\\repos\\happyhouse\\happyhouse_backend\\services\\installmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{491364BD-82D9-471F-8A19-D7151BF71D93}|HappyHouse_BackEnd\\HappyHouse_Server.csproj|solutionrelative:happyhouse_backend\\services\\installmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomerRegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Controllers\\CustomerRegistrationController.cs",
+              "RelativeDocumentMoniker": "HappyHouse_BackEnd\\Controllers\\CustomerRegistrationController.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Controllers\\CustomerRegistrationController.cs",
+              "RelativeToolTip": "HappyHouse_BackEnd\\Controllers\\CustomerRegistrationController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T18:20:42.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "new_customer_form.cs",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\Forms\\new_customer_form.cs",
+              "RelativeDocumentMoniker": "Happy House\\Forms\\new_customer_form.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\Forms\\new_customer_form.cs",
+              "RelativeToolTip": "Happy House\\Forms\\new_customer_form.cs",
+              "ViewState": "AgIAAGgBAAAAAAAAAAAgwF4BAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T16:18:36.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerRegistrationService.cs",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\CustomerRegistrationService.cs",
+              "RelativeDocumentMoniker": "HappyHouse_BackEnd\\Services\\CustomerRegistrationService.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\CustomerRegistrationService.cs",
+              "RelativeToolTip": "HappyHouse_BackEnd\\Services\\CustomerRegistrationService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAMwB0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T14:20:25.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LedgerService.cs",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\LedgerService.cs",
+              "RelativeDocumentMoniker": "HappyHouse_BackEnd\\Services\\LedgerService.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\LedgerService.cs",
+              "RelativeToolTip": "HappyHouse_BackEnd\\Services\\LedgerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T13:45:13.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "customers_form.cs",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\Forms\\customers_form.cs",
+              "RelativeDocumentMoniker": "Happy House\\Forms\\customers_form.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\Forms\\customers_form.cs",
+              "RelativeToolTip": "Happy House\\Forms\\customers_form.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T12:33:37.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "new_customer_form.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\Forms\\new_customer_form.cs",
+              "RelativeDocumentMoniker": "Happy House\\Forms\\new_customer_form.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\Forms\\new_customer_form.cs [Design]",
+              "RelativeToolTip": "Happy House\\Forms\\new_customer_form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T11:28:19.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomersService.cs",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\CustomersService.cs",
+              "RelativeDocumentMoniker": "HappyHouse_BackEnd\\Services\\CustomersService.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\CustomersService.cs",
+              "RelativeToolTip": "HappyHouse_BackEnd\\Services\\CustomersService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T16:50:23.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "new_installment_form.cs",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\Forms\\new_installment_form.cs",
+              "RelativeDocumentMoniker": "Happy House\\Forms\\new_installment_form.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\Forms\\new_installment_form.cs",
+              "RelativeToolTip": "Happy House\\Forms\\new_installment_form.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAwIwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T19:11:56.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InstallmentsService.cs",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\InstallmentsService.cs",
+              "RelativeDocumentMoniker": "HappyHouse_BackEnd\\Services\\InstallmentsService.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\InstallmentsService.cs",
+              "RelativeToolTip": "HappyHouse_BackEnd\\Services\\InstallmentsService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T19:04:20.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddInstallmentService.cs",
+              "DocumentMoniker": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\AddInstallmentService.cs",
+              "RelativeDocumentMoniker": "HappyHouse_BackEnd\\Services\\AddInstallmentService.cs",
+              "ToolTip": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\HappyHouse_BackEnd\\Services\\AddInstallmentService.cs",
+              "RelativeToolTip": "HappyHouse_BackEnd\\Services\\AddInstallmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T19:01:14.081Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
