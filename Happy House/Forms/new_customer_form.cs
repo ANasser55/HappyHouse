@@ -319,7 +319,7 @@ namespace HappyHouse_Client
             transaction.Date = installment.StartDate;
             transaction.TransactorName = customer.CustomerName;
             transaction.Amount = decimal.Parse(advanceTextBox.Text.Replace("EGP", "").Replace(".00", "").Trim());
-            transaction.Type = "كاش";
+            transaction.Type = "دخل";
             transaction.Description = "مقدم قسط";
 
             registration.Customer = customer;

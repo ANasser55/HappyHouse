@@ -13,7 +13,7 @@ namespace HappyHouse_Server.Services
             _context = context;
         }
 
-        public async Task<List<Transaction>> GetAllTranactionsAsync()
+        public async Task<List<Transaction>> GetAllTransactionsAsync()
         {
             var tranactions = await _context.Transactions.ToListAsync();
             return tranactions;

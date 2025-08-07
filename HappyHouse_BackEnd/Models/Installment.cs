@@ -11,5 +11,7 @@
         public DateTime NextDate { get; set; }
         public bool isPaid { get; set; }
         public string Description { get; set; }
+        
+        public Customer? Customer { get; set; } 
     }
 }

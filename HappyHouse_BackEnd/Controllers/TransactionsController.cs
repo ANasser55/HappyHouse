@@ -19,7 +19,7 @@ namespace HappyHouse_Server.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllTransActionsAsync()
         {
-            var transactions = await _transactionsService.GetAllTranactionsAsync();
+            var transactions = await _transactionsService.GetAllTransactionsAsync();
             return Ok(transactions);
         }
         [HttpGet("getCustomerTransactions")]

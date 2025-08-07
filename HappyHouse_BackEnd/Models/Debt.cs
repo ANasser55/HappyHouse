@@ -7,6 +7,8 @@
         public decimal Amount { get; set; }
         public decimal PaidAmount { get; set; }
         public string Description { get; set; }
+
+        public Debtor Debtor { get; set; }
         
         
     }

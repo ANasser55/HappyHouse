@@ -77,3 +77,4 @@ C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\H
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.genruntimeconfig.cache
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\ref\HappyHouse_Client.dll
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHou.32097F3B.Up2Date
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.sourcelink.json

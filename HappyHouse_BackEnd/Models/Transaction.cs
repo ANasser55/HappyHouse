@@ -13,5 +13,11 @@
         public string Type { get; set; }
         public string Description { get; set; }
 
+
+        public Customer? Customer { get; set; }
+        public Installment? Installment { get; set; }
+        public Debtor? Debtor { get; set; }
+        public Ledger? Ledger { get; set; }
+
     }
 }

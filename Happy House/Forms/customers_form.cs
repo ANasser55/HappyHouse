@@ -14,7 +14,7 @@ namespace HappyHouse_Client
         public customers_form()
         {
             InitializeComponent();
-            LoadCustomers();
+            LoadCustomersAsync();
 
         }
 
@@ -41,7 +41,7 @@ namespace HappyHouse_Client
         }
 
 
-        private async Task LoadCustomers()
+        private async Task LoadCustomersAsync()
         {
                    
             var customers = await GetCustomersAsync();
@@ -90,7 +90,7 @@ namespace HappyHouse_Client
                 }
                 else
                 {
-                    LoadCustomers();
+                    LoadCustomersAsync();
                 }
             }
 
@@ -226,7 +226,7 @@ namespace HappyHouse_Client
             ((Form1)this.ParentForm).ChangeTitle("العملاء");
 
 
-            LoadCustomers();
+            LoadCustomersAsync();
         }
 
     }

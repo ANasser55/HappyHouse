@@ -87,3 +87,4 @@ C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\obj\Debug\net8.0\re
 C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\obj\Debug\net8.0\HappyHouse_Server.pdb
 C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\obj\Debug\net8.0\HappyHouse_Server.genruntimeconfig.cache
 C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\obj\Debug\net8.0\ref\HappyHouse_Server.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\obj\Debug\net8.0\HappyHouse_Server.sourcelink.json

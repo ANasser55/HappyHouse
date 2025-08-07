@@ -1,4 +1,6 @@
 ﻿using HappyHouse_Client.Old;
+using HappyHouse_Client.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,8 @@ namespace HappyHouse_Client
 {
     public partial class ledger_form : Form
     {
+        private readonly HttpClient httpClient = new HttpClient();
+
         BindingSource ledgerBindingSource = new BindingSource();
         bool isSearch = true;
         bool isFirst = true;
@@ -20,9 +24,7 @@ namespace HappyHouse_Client
         {
             InitializeComponent();
             dateTimePicker1.Value = DateTime.Now;
-            LoadLedger();
-
-            
+            LoadLedgerAsync();
 
         }
 
@@ -35,69 +37,111 @@ namespace HappyHouse_Client
                 ledgerDataGridView.Columns["date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 ledgerDataGridView.Columns["income"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 ledgerDataGridView.Columns["expense"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                ledgerDataGridView.Columns["safe_box"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                ledgerDataGridView.Columns["balance"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
                 ledgerDataGridView.Columns["date"].DefaultCellStyle.Format = "dd/MM/yyyy";
                 ledgerDataGridView.Columns["date"].HeaderText = "التاريخ";
                 ledgerDataGridView.Columns["income"].HeaderText = "الدخل";
                 ledgerDataGridView.Columns["expense"].HeaderText = "المصروفات";
-                ledgerDataGridView.Columns["safe_box"].HeaderText = "الخزنة";
-                ledgerDataGridView.Columns["ledger_id"].Visible = false;
+                ledgerDataGridView.Columns["balance"].HeaderText = "الخزنة";
+                ledgerDataGridView.Columns["LedgerId"].Visible = false;
             }
             else
             {
-                ledgerDataGridView.Columns["transaction_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                ledgerDataGridView.Columns["transactor_name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                ledgerDataGridView.Columns["amount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                ledgerDataGridView.Columns["type"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                ledgerDataGridView.Columns["description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                
+                ledgerDataGridView.Columns["TransactionId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                ledgerDataGridView.Columns["TransactorName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                ledgerDataGridView.Columns["Amount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                ledgerDataGridView.Columns["Type"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                ledgerDataGridView.Columns["Description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                //ledgerDataGridView.Columns["transaction_id"].Visible = false;
-                ledgerDataGridView.Columns["transaction_id"].HeaderText = "رقم المعاملة";
-                ledgerDataGridView.Columns["transactor_name"].HeaderText = "اسم العميل";
-                ledgerDataGridView.Columns["amount"].HeaderText = "المبلغ";
-                ledgerDataGridView.Columns["type"].HeaderText = "نوع المعامله";
-                ledgerDataGridView.Columns["description"].HeaderText = "ملاحظات";
-                ledgerDataGridView.Columns["customer_id"].Visible = false;
-                ledgerDataGridView.Columns["debtor_id"].Visible = false;
-                ledgerDataGridView.Columns["ledger_id"].Visible = false;
+
+                //ledgerDataGridView.Columns["TransactionId"].Visible = false;
+                ledgerDataGridView.Columns["TransactionId"].HeaderText = "رقم المعاملة";
+                ledgerDataGridView.Columns["TransactorName"].HeaderText = "اسم العميل";
+                ledgerDataGridView.Columns["Amount"].HeaderText = "المبلغ";
+                ledgerDataGridView.Columns["Type"].HeaderText = "نوع المعامله";
+                ledgerDataGridView.Columns["Description"].HeaderText = "ملاحظات";
+                ledgerDataGridView.Columns["CustomerId"].Visible = false;
+                ledgerDataGridView.Columns["DebtorId"].Visible = false;
+                ledgerDataGridView.Columns["LedgerId"].Visible = false;
             }
         }
 
-        private void LoadLedger()
+        public async Task<List<Models.Ledger>> GetLedgersAsync()
         {
-            Ledger_DAO ledger_DAO = new Ledger_DAO();
+            var url = "https://localhost:7176/api/Ledger/all";
 
-            ledger_DAO.Calculate_inc_exp();
-            ledgerBindingSource.DataSource = ledger_DAO.GetLedgers();
-            ledgerDataGridView.DataSource = ledgerBindingSource;
+            try
+            {
+                HttpResponseMessage response = await httpClient.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                var body = await response.Content.ReadAsStringAsync();
+                var ledgers = JsonConvert.DeserializeObject<List<Models.Ledger>>(body);
+
+                return ledgers;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+                return new List<Models.Ledger>();
+            }
+        }
+        private async Task LoadLedgerAsync()
+        {
+            var ledgers = await GetLedgersAsync();
+            ledgerDataGridView.DataSource = ledgers;
 
             LedgerDataGridStyle();
 
 
         }
-        private void SearchLedger(DateTime date)
+        private async Task SearchLedgerAsync(DateTime date)
         {
-            Ledger_DAO ledger_DAO = new Ledger_DAO();
-            ledgerBindingSource.DataSource = ledger_DAO.search_ledger_date(date);
-            ledgerDataGridView.DataSource = ledgerBindingSource;
-            ledgerDataGridView.Columns["date"].DefaultCellStyle.Format = "dd/MM/yyyy";
-            ledgerDataGridView.Columns["date"].HeaderText = "التاريخ";
-            ledgerDataGridView.Columns["income"].HeaderText = "الدخل";
-            ledgerDataGridView.Columns["expense"].HeaderText = "المصروفات";
-            ledgerDataGridView.Columns["safe_box"].HeaderText = "الخزنة";
+            var url = $"https://localhost:7176/api/Ledger/date?date={date}";
 
-            //ledgerDataGridView.Columns["ledger_id"].Visible = false;
+            try
+            {
+                HttpResponseMessage response = await httpClient.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                var body = await response.Content.ReadAsStringAsync();
+                var ledgers = JsonConvert.DeserializeObject<List<Models.Ledger>>(body);
+
+                ledgerDataGridView.DataSource = ledgers;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+                ledgerDataGridView.DataSource = new List<Models.Ledger>();
+            }
+
         }
 
-        private void LoadTransactions(int id)
+        private async Task LoadTransactions(int id)
         {
-            TransactionDAO transaction_DAO = new TransactionDAO();
-            ledgerBindingSource.DataSource = transaction_DAO.GetTransactionsLedger(id);
-            ledgerDataGridView.DataSource = ledgerBindingSource;
+            var url = $"https://localhost:7176/api/Transactions/getLedgerTransactions?id={id}";
 
-            LedgerDataGridStyle();
+            try
+            {
+                HttpResponseMessage response = await httpClient.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                var body = await response.Content.ReadAsStringAsync();
+                var transactions = JsonConvert.DeserializeObject<List<Models.Transaction>>(body);
+
+                ledgerDataGridView.DataSource = transactions;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                ledgerDataGridView.DataSource = new List<Models.Transaction>();
+            }
+
+            //TransactionDAO transaction_DAO = new TransactionDAO();
+            //ledgerBindingSource.DataSource = transaction_DAO.GetTransactionsLedger(id);
+            //ledgerDataGridView.DataSource = ledgerBindingSource;
+
+            //LedgerDataGridStyle();
 
 
         }
@@ -117,10 +161,15 @@ namespace HappyHouse_Client
                 dateTimePicker.CustomFormat = "dd/MM/yyyy";
 
 
-                DateTime value = dateTimePicker.Value;
+                DateTime date = dateTimePicker.Value;
                 //isFirst = true;
 
-                SearchLedger(value);
+                async void HandleSearch()
+                {
+                   await SearchLedgerAsync(date);
+                }
+
+                HandleSearch();
 
             }
 
@@ -133,7 +182,7 @@ namespace HappyHouse_Client
             isSearch = false;
             isFirst = true;
             dateTimePicker1.Value = DateTime.Today;
-            LoadLedger();
+            LoadLedgerAsync();
         }
 
         private void ledعملية_جديدةbtn_Click(object sender, EventArgs e)
@@ -145,8 +194,6 @@ namespace HappyHouse_Client
         {
             if (isFirst)
             {
-
-
                 isFirst = false;
                 DataGridView dataGridView = (DataGridView)sender;
 
@@ -160,7 +207,13 @@ namespace HappyHouse_Client
 
                 isSearch = true;
 
-                LoadTransactions(id);
+                async void Handler()
+                {
+                    await LoadTransactions(id);
+                }
+
+                Handler();
+                //LedgerDataGridStyle();
 
                 dateXBtn.Visible = true;
 

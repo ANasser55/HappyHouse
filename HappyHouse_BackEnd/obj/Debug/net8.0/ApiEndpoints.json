@@ -86,7 +86,17 @@
   {
     "ContainingType": "HappyHouse_Server.Controllers.LedgerController",
     "Method": "GetLedgers",
-    "RelativePath": "api/Ledger",
+    "RelativePath": "api/Ledger/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HappyHouse_Server.Controllers.LedgerController",
+    "Method": "GetLedgerByDate",
+    "RelativePath": "api/Ledger/date",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

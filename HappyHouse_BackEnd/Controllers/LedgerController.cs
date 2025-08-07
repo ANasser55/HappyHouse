@@ -15,10 +15,16 @@ namespace HappyHouse_Server.Controllers
             _ledgerService = ledgerService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetLedgers(DateTime date)
+        [HttpGet("all")]
+        public async Task<IActionResult> GetLedgers()
+        {            
+            return Ok(await _ledgerService.GetAllLedgersAsync());
+        }
+
+        [HttpGet("date")]
+        public async Task<IActionResult> GetLedgerByDate(DateTime date)
         {
-            return Ok(await _ledgerService.GetAllLedgersAsync(date));
+            return Ok(await _ledgerService.GetLedgerByDateAsync(date));
         }
     }
 }
