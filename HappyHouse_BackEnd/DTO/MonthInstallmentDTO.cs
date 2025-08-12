@@ -1,14 +1,13 @@
-﻿namespace Models
+﻿namespace HappyHouse_Server.DTO
 {
-    public class MonthInstallment
+    public class MonthInstallmentDTO
     {
-        public int CustomerId { get; set; }
-        public int InstallmentId { get; set; }
         public string CustomerName { get; set; }
-        public decimal MonthlyAmount { get; set; }
+        public decimal TotalAmount { get; set; }
+        public decimal PaymentPerMonth { get; set; }
+        public decimal RemainingAmount { get; set; }
         public DateTime NextDate { get; set; }
         public int DelayDays { get; set; }
-        public decimal RemainingAmount { get; set; }
         public int RemainingInstallments { get; set; }
         public string Description { get; set; }
 

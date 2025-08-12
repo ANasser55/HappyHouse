@@ -84,6 +84,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HappyHouse_Server.Controllers.InstallmentsController",
+    "Method": "GetMonthInstallments",
+    "RelativePath": "api/Installments/month",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HappyHouse_Server.Controllers.LedgerController",
     "Method": "GetLedgers",
     "RelativePath": "api/Ledger/all",
@@ -107,16 +117,6 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "HappyHouse_Server.Controllers.MonthInstallmentsController",
-    "Method": "GetMonthInstallmentsAsync",
-    "RelativePath": "api/MonthInstallments",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

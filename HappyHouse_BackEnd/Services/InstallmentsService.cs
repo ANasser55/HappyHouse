@@ -1,4 +1,5 @@
 ﻿using HappyHouse_Server.Data;
+using HappyHouse_Server.DTO;
 using HappyHouse_Server.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,5 +27,28 @@ namespace HappyHouse_Server.Services
                 .ToListAsync();
             return installments;
         }
+
+        public async Task<List<MonthInstallmentDTO>> GetMonthInstallmentsAsync()
+        {
+            var installments = await _context.Installments.Where(i => i.isPaid == false).Where(i => i.NextDate <= DateTime.Now).Include(i => i.Customer).ToListAsync();
+            var monthInstallments = new List<MonthInstallmentDTO>();
+            foreach (var installment in installments)
+            {
+                monthInstallments.Add(new MonthInstallmentDTO
+                {
+                    CustomerName = installment.Customer.CustomerName,
+                    TotalAmount = installment.TotalAmount,
+                    PaymentPerMonth = installment.PaymentPerMonth,
+                    NextDate = installment.NextDate,
+                    DelayDays = installment.DelayDays,
+                    RemainingAmount = installment.RemainingAmount,
+                    RemainingInstallments = installment.RemainingInstallments,
+                    Description = installment.Description
+                });
+            }
+
+            return monthInstallments;
+        }
+
     }
 }

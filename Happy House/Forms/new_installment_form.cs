@@ -395,7 +395,7 @@ namespace HappyHouse_Client
         private void backBtn_Click(object sender, EventArgs e)
         {
             ((Form1)this.ParentForm).ChangeTitle("الأقساط");
-            ((Form1)this.ParentForm).loadform(new instalment_form());
+            ((Form1)this.ParentForm).loadform(new installment_form());
         }
 
         private void new_installment_form_Click(object sender, EventArgs e)

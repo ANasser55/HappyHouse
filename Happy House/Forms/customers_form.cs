@@ -15,7 +15,6 @@ namespace HappyHouse_Client
         {
             InitializeComponent();
             LoadCustomersAsync();
-
         }
 
         private async Task<List<Customer>> GetCustomersAsync()
@@ -86,7 +85,6 @@ namespace HappyHouse_Client
                 if (searchTextBox.Text.Length > 0)
                 {
                     customersDataGridView.DataSource = await SearchCustomersAsync(searchTextBox.Text);
-                    //CustomersDataGridStyle();
                 }
                 else
                 {
@@ -119,10 +117,7 @@ namespace HappyHouse_Client
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Error: " + ex.Message);
-                Console.WriteLine("Error: " + ex.Message);
-                //LoadCustomers();
                 return new List<Transaction>();
             }
         }
@@ -131,13 +126,6 @@ namespace HappyHouse_Client
         {
             var transactions = await GetTransactionsByIdAsync(id);
             customersDataGridView.DataSource = transactions;
-
-            //TransactionDAO transactionDAO = new TransactionDAO();
-
-            //customersBindingSource.DataSource = transactionDAO.GetTransactionsCustomer(id);
-            //customersDataGridView.DataSource = customersBindingSource;
-
-
         }
 
 
@@ -153,13 +141,11 @@ namespace HappyHouse_Client
                 customersDataGridView.Columns["CustomerId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["CustomerName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["Phone"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                //customersDataGridView.Columns["NextPayment"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["RemainingAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
                 customersDataGridView.Columns["CustomerId"].HeaderText = "كود العميل";
                 customersDataGridView.Columns["CustomerName"].HeaderText = "إسم العميل";
                 customersDataGridView.Columns["Phone"].HeaderText = "هاتف العميل";
-                //customersDataGridView.Columns["NextPayment"].Visible = false;
                 customersDataGridView.Columns["RemainingAmount"].HeaderText = "المتبقي عل العميل";
             }
             else 
@@ -188,7 +174,7 @@ namespace HappyHouse_Client
 
         private void customersDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            async Task HandleDoubleClickAsync()
+            async void HandleDoubleClickAsync()
             {
                 if (isFirst)
                 {

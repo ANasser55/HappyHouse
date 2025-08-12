@@ -127,6 +127,18 @@
         }
       }
     },
+    "/api/Installments/month": {
+      "get": {
+        "tags": [
+          "Installments"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Ledger/all": {
       "get": {
         "tags": [
@@ -153,18 +165,6 @@
               "format": "date-time"
             }
           }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/MonthInstallments": {
-      "get": {
-        "tags": [
-          "MonthInstallments"
         ],
         "responses": {
           "200": {
@@ -250,6 +250,13 @@
           "remainingAmount": {
             "type": "number",
             "format": "double"
+          },
+          "installments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Installment"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -298,7 +305,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "amount": {
+          "totalAmount": {
             "type": "number",
             "format": "double"
           },
@@ -324,6 +331,16 @@
           "description": {
             "type": "string",
             "nullable": true
+          },
+          "delayDays": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "remainingInstallments": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
           },
           "customer": {
             "$ref": "#/components/schemas/Customer"

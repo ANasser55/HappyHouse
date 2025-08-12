@@ -45,5 +45,18 @@ namespace HappyHouse_Server.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Error retrieving installments for customer: {ex.Message}");
             }
         }
+        [HttpGet("month")]
+        public async Task<IActionResult> GetMonthInstallments()
+        {
+            try
+            {
+                var installments = await _installmentsService.GetMonthInstallmentsAsync();
+                return Ok(installments);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error retrieving installments: {ex.Message}");
+            }
+        }
     }
 }

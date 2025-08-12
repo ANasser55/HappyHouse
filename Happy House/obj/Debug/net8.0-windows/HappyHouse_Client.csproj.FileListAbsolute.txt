@@ -2,7 +2,6 @@ C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\H
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.customers_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.Form1.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.home_form.resources
-C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.instalment_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.ledger_cash_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.ledger_expenses_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.ledger_form.resources
@@ -78,3 +77,4 @@ C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\H
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\ref\HappyHouse_Client.dll
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHou.32097F3B.Up2Date
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.sourcelink.json
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.installment_form.resources

@@ -1,24 +1,17 @@
-﻿using HappyHouse_Client.Models;
+﻿using HappyHouse_Client.DTO;
+using HappyHouse_Client.Models;
 using HappyHouse_Client.Old;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 
 namespace HappyHouse_Client
 {
-    public partial class instalment_form : Form
+    public partial class installment_form : Form
     {
         private readonly HttpClient _client = new HttpClient();
 
-        public instalment_form()
+        public installment_form()
         {
             InitializeComponent();
 
@@ -66,20 +59,22 @@ namespace HappyHouse_Client
         private void MonthInstallmentsDataGridStyle()
         {
             customersInstallmentsDataGridView.RowTemplate.Height = 38;
-            customersInstallmentsDataGridView.Columns["InstallmentId"].Visible = false;
-            customersInstallmentsDataGridView.Columns["CustomerId"].Visible = false;
+            //customersInstallmentsDataGridView.Columns["InstallmentId"].Visible = false;
+            //customersInstallmentsDataGridView.Columns["CustomerId"].Visible = false;
 
             customersInstallmentsDataGridView.Columns["CustomerName"].HeaderText = "اسم العميل";
             customersInstallmentsDataGridView.Columns["NextDate"].HeaderText = "تاريخ الإستحقاق";
-            customersInstallmentsDataGridView.Columns["MonthlyAmount"].HeaderText = "قيمة القسط";
+            customersInstallmentsDataGridView.Columns["TotalAmount"].HeaderText = "المبلغ المراد تقسيطه";
+            customersInstallmentsDataGridView.Columns["PaymentPerMonth"].HeaderText = "قيمة القسط";
             customersInstallmentsDataGridView.Columns["RemainingAmount"].HeaderText = "المتبقي";
             customersInstallmentsDataGridView.Columns["RemainingInstallments"].HeaderText = "الأقساط المتبقية";
             customersInstallmentsDataGridView.Columns["DelayDays"].HeaderText = "مر على موعد السداد";
             customersInstallmentsDataGridView.Columns["Description"].HeaderText = "ملاحظات";
 
             customersInstallmentsDataGridView.Columns["CustomerName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
+            customersInstallmentsDataGridView.Columns["TotalAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["NextDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
-            customersInstallmentsDataGridView.Columns["MonthlyAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
+            customersInstallmentsDataGridView.Columns["PaymentPerMonth"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["RemainingAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["RemainingInstallments"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["DelayDays"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
@@ -123,9 +118,9 @@ namespace HappyHouse_Client
             customersInstallmentsDataGridView.Columns["customer_total_remaining"].HeaderText = "المتبقي على العميل";
         }
 
-        private async Task<List<MonthInstallment>> GetThisMonthInstallments()
+        private async Task<List<MonthInstallmentDTO>> GetThisMonthInstallments()
         {
-            var url = "https://localhost:7176/api/MonthInstallments";
+            var url = "https://localhost:7176/api/Installments/month";
 
             try
             {
@@ -133,13 +128,13 @@ namespace HappyHouse_Client
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
-                var Installments = JsonConvert.DeserializeObject<List<MonthInstallment>>(responseBody);
+                var Installments = JsonConvert.DeserializeObject<List<MonthInstallmentDTO>>(responseBody);
                 return Installments;
             }
             catch (Exception)
             {
 
-                return new List<MonthInstallment>();
+                return new List<MonthInstallmentDTO>();
             }
 
         }

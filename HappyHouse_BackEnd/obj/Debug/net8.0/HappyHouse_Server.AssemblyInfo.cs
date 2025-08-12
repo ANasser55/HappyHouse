@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HappyHouse_Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab61aaf401c21553f0061facdb1e446e82ae5e6e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c34e1cc2442b593ff2dbbd13935731f0415d8d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("HappyHouse_Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HappyHouse_Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -72,7 +72,7 @@
             اليوميةbtn.BackColor = Color.FromArgb(14, 52, 65);
             الخزنةbtn.BackColor = Color.FromArgb(14, 52, 65);
 
-            loadform(new instalment_form());
+            loadform(new installment_form());
         }
 
         private void اليوميةbtn_Click(object sender, EventArgs e)
@@ -156,10 +156,6 @@
             loadform(new reports_form());
             ChangeTitle("التقارير السنوية");
 
-            //DateTime d = dao.getm();
-
-            //string dd = d.ToString("MM");
-            //MessageBox.Show(dd);
         }
     }
 }

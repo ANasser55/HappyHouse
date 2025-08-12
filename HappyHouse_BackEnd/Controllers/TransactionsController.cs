@@ -39,7 +39,7 @@ namespace HappyHouse_Server.Controllers
             var transactions = await _transactionsService.GetLedgerTransactionsAsync(id);
             if (transactions == null || !transactions.Any())
             {
-                return NotFound("No transactions found for the given customer ID.");
+                return NotFound("No transactions found for the given ledger ID.");
             }
             return Ok(transactions);
         }

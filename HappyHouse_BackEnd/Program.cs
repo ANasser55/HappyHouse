@@ -18,7 +18,6 @@ builder.Services.AddScoped<CustomerRegistrationService>();
 builder.Services.AddScoped<TransactionsService>();
 builder.Services.AddScoped<InstallmentsService>();
 builder.Services.AddScoped<LedgerService>();
-builder.Services.AddScoped<MonthInstallmentsService>();
 
 var app = builder.Build();
 

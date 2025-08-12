@@ -1,15 +1,6 @@
-﻿using HappyHouse_Client.Old;
-using HappyHouse_Client.Models;
+﻿using HappyHouse_Client.Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace HappyHouse_Client
 {
@@ -17,7 +8,6 @@ namespace HappyHouse_Client
     {
         private readonly HttpClient httpClient = new HttpClient();
 
-        BindingSource ledgerBindingSource = new BindingSource();
         bool isSearch = true;
         bool isFirst = true;
         public ledger_form()
@@ -55,8 +45,6 @@ namespace HappyHouse_Client
                 ledgerDataGridView.Columns["Description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
 
-                //ledgerDataGridView.Columns["TransactionId"].Visible = false;
-                ledgerDataGridView.Columns["TransactionId"].HeaderText = "رقم المعاملة";
                 ledgerDataGridView.Columns["TransactorName"].HeaderText = "اسم العميل";
                 ledgerDataGridView.Columns["Amount"].HeaderText = "المبلغ";
                 ledgerDataGridView.Columns["Type"].HeaderText = "نوع المعامله";
@@ -64,10 +52,12 @@ namespace HappyHouse_Client
                 ledgerDataGridView.Columns["CustomerId"].Visible = false;
                 ledgerDataGridView.Columns["DebtorId"].Visible = false;
                 ledgerDataGridView.Columns["LedgerId"].Visible = false;
+                ledgerDataGridView.Columns["TransactionId"].Visible = false;
+                ledgerDataGridView.Columns["InstallmentId"].Visible = false;
             }
         }
 
-        public async Task<List<Models.Ledger>> GetLedgersAsync()
+        public async Task<List<Ledger>> GetLedgersAsync()
         {
             var url = "https://localhost:7176/api/Ledger/all";
 
@@ -76,7 +66,7 @@ namespace HappyHouse_Client
                 HttpResponseMessage response = await httpClient.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                var ledgers = JsonConvert.DeserializeObject<List<Models.Ledger>>(body);
+                var ledgers = JsonConvert.DeserializeObject<List<Ledger>>(body);
 
                 return ledgers;
             }
@@ -84,7 +74,7 @@ namespace HappyHouse_Client
             {
 
                 MessageBox.Show("Error: " + ex.Message);
-                return new List<Models.Ledger>();
+                return new List<Ledger>();
             }
         }
         private async Task LoadLedgerAsync()
@@ -93,8 +83,6 @@ namespace HappyHouse_Client
             ledgerDataGridView.DataSource = ledgers;
 
             LedgerDataGridStyle();
-
-
         }
         private async Task SearchLedgerAsync(DateTime date)
         {
@@ -105,7 +93,7 @@ namespace HappyHouse_Client
                 HttpResponseMessage response = await httpClient.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                var ledgers = JsonConvert.DeserializeObject<List<Models.Ledger>>(body);
+                var ledgers = JsonConvert.DeserializeObject<List<Ledger>>(body);
 
                 ledgerDataGridView.DataSource = ledgers;
             }
@@ -113,7 +101,7 @@ namespace HappyHouse_Client
             {
 
                 MessageBox.Show("Error: " + ex.Message);
-                ledgerDataGridView.DataSource = new List<Models.Ledger>();
+                ledgerDataGridView.DataSource = new List<Ledger>();
             }
 
         }
@@ -127,23 +115,17 @@ namespace HappyHouse_Client
                 HttpResponseMessage response = await httpClient.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                var transactions = JsonConvert.DeserializeObject<List<Models.Transaction>>(body);
+                var transactions = JsonConvert.DeserializeObject<List<Transaction>>(body);
 
                 ledgerDataGridView.DataSource = transactions;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-                ledgerDataGridView.DataSource = new List<Models.Transaction>();
+                ledgerDataGridView.DataSource = new List<Transaction>();
             }
 
-            //TransactionDAO transaction_DAO = new TransactionDAO();
-            //ledgerBindingSource.DataSource = transaction_DAO.GetTransactionsLedger(id);
-            //ledgerDataGridView.DataSource = ledgerBindingSource;
-
-            //LedgerDataGridStyle();
-
-
+            LedgerDataGridStyle();
         }
 
 
@@ -162,7 +144,6 @@ namespace HappyHouse_Client
 
 
                 DateTime date = dateTimePicker.Value;
-                //isFirst = true;
 
                 async void HandleSearch()
                 {
@@ -213,7 +194,6 @@ namespace HappyHouse_Client
                 }
 
                 Handler();
-                //LedgerDataGridStyle();
 
                 dateXBtn.Visible = true;
 

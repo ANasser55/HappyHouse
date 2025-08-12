@@ -1,6 +1,6 @@
 ﻿using HappyHouse_Server.Models;
 using Microsoft.EntityFrameworkCore;
-using Models;
+//using Models;
 
 namespace HappyHouse_Server.Data
 {
@@ -12,7 +12,6 @@ namespace HappyHouse_Server.Data
         public DbSet<Debtor> Debtors { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Ledger> Ledgers { get; set; }
-        public DbSet<MonthInstallment> MonthInstallments { get; set; }
 
 
         public HappyHouseDbContext(DbContextOptions<HappyHouseDbContext> options)
@@ -29,17 +28,15 @@ namespace HappyHouse_Server.Data
             modelBuilder.Entity<Debtor>().ToTable("debtors").HasKey(x => x.DebtorId);
             modelBuilder.Entity<Transaction>().ToTable("transactions").HasKey(x => x.TransactionId);
             modelBuilder.Entity<Ledger>().ToTable("ledger").HasKey(x => x.LedgerId);
-            modelBuilder.Entity<MonthInstallment>().ToView("vw_MonthInstallments").HasNoKey();
 
             modelBuilder.Entity<Customer>().Property(c => c.CustomerId).HasColumnName("customer_id");
             modelBuilder.Entity<Customer>().Property(c => c.CustomerName).HasColumnName("customer_name");
             modelBuilder.Entity<Customer>().Property(c => c.Phone).HasColumnName("customer_phone");
-            //modelBuilder.Entity<Customer>().Property(c => c.NextPayment).HasColumnName("customer_next_payment");
             modelBuilder.Entity<Customer>().Property(c => c.RemainingAmount).HasColumnName("customer_remaining");
 
             modelBuilder.Entity<Installment>().Property(i => i.InstallmentId).HasColumnName("installment_id");
             modelBuilder.Entity<Installment>().Property(i => i.CustomerId).HasColumnName("customer_id");
-            modelBuilder.Entity<Installment>().Property(i => i.Amount).HasColumnName("amount");
+            modelBuilder.Entity<Installment>().Property(i => i.TotalAmount).HasColumnName("amount");
             modelBuilder.Entity<Installment>().Property(i => i.PaymentPerMonth).HasColumnName("payment_per_month");
             modelBuilder.Entity<Installment>().Property(i => i.RemainingAmount).HasColumnName("remaining_amount");
             modelBuilder.Entity<Installment>().Property(i => i.StartDate).HasColumnName("start_date");
@@ -74,15 +71,6 @@ namespace HappyHouse_Server.Data
             modelBuilder.Entity<Ledger>().Property(l => l.Expense).HasColumnName("expense");
             modelBuilder.Entity<Ledger>().Property(l => l.Balance).HasColumnName("balance");
 
-            modelBuilder.Entity<MonthInstallment>().Property(mi => mi.InstallmentId).HasColumnName("installment_id");
-            modelBuilder.Entity<MonthInstallment>().Property(mi => mi.CustomerId).HasColumnName("customer_id");
-            modelBuilder.Entity<MonthInstallment>().Property(mi => mi.CustomerName).HasColumnName("customer_name");
-            modelBuilder.Entity<MonthInstallment>().Property(mi => mi.MonthlyAmount).HasColumnName("payment_per_month");
-            modelBuilder.Entity<MonthInstallment>().Property(mi => mi.NextDate).HasColumnName("next_date");
-            modelBuilder.Entity<MonthInstallment>().Property(mi => mi.RemainingAmount).HasColumnName("remaining_amount");
-            modelBuilder.Entity<MonthInstallment>().Property(mi => mi.DelayDays).HasColumnName("delay_days");
-            modelBuilder.Entity<MonthInstallment>().Property(mi => mi.RemainingInstallments).HasColumnName("installments_remaining");
-            modelBuilder.Entity<MonthInstallment>().Property(mi => mi.Description).HasColumnName("description");
 
         }
 
