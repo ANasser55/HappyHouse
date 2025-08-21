@@ -40,8 +40,5 @@
     <Compile Update="Forms\safebox_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\this_month_installments_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

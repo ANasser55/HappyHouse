@@ -1,5 +1,4 @@
-﻿using HappyHouse_Server.Services;
-using Microsoft.AspNetCore.Http;
+﻿using HappyHouse_Server.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HappyHouse_Server.Controllers
@@ -8,9 +7,9 @@ namespace HappyHouse_Server.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private readonly CustomersService _customersService;
+        private readonly ICustomersService _customersService;
 
-        public CustomersController(CustomersService customersService)
+        public CustomersController(ICustomersService customersService)
         {
             _customersService = customersService;
         }
@@ -21,24 +20,24 @@ namespace HappyHouse_Server.Controllers
             return Ok(await _customersService.GetAllCustomers());
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
-        {
-            try
-            {
-                var customer = await _customersService.GetCustomerById(id);
-                return Ok(customer);
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
+        //[HttpGet("{id}")]
+        //public async Task<IActionResult> Get(int id)
+        //{
+        //    try
+        //    {
+        //        var customer = await _customersService.GetCustomerById(id);
+        //        return Ok(customer);
+        //    }
+        //    catch (KeyNotFoundException ex)
+        //    {
+        //        return NotFound(ex.Message);
+        //    }
 
-        }
+        //}
         [HttpGet("search")]
         public async Task<IActionResult> SearchCustomers([FromQuery] string text)
         {
-            var customers = await _customersService.SearchCustomer(text);
+            var customers = await _customersService.SearchCustomers(text);
             return Ok(customers);
         }
     }

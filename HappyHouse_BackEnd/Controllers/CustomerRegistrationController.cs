@@ -1,7 +1,5 @@
 ﻿using HappyHouse_Server.DTO;
-using HappyHouse_Server.Models;
-using HappyHouse_Server.Services;
-using Microsoft.AspNetCore.Http;
+using HappyHouse_Server.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HappyHouse_Server.Controllers
@@ -10,9 +8,9 @@ namespace HappyHouse_Server.Controllers
     [ApiController]
     public class CustomerRegistrationController : ControllerBase
     {
-        private readonly CustomerRegistrationService _customerRegistrationService;
+        private readonly ICustomerRegistrationService _customerRegistrationService;
 
-        public CustomerRegistrationController(CustomerRegistrationService customerRegistrationService)
+        public CustomerRegistrationController(ICustomerRegistrationService customerRegistrationService)
         {
             _customerRegistrationService = customerRegistrationService;
         }

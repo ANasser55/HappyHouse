@@ -1,4 +1,5 @@
-﻿using HappyHouse_Client.Models;
+﻿using HappyHouse_Client.DTO;
+using HappyHouse_Client.Models;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace HappyHouse_Client
             LoadCustomersAsync();
         }
 
-        private async Task<List<Customer>> GetCustomersAsync()
+        private async Task<List<CustomerDTO>> GetCustomersAsync()
         {
             var url = "https://localhost:7176/api/Customers";
 
@@ -27,7 +28,7 @@ namespace HappyHouse_Client
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
-                var customers = JsonConvert.DeserializeObject<List<Customer>>(responseBody);
+                var customers = JsonConvert.DeserializeObject<List<CustomerDTO>>(responseBody);
 
                 return customers;
             }
@@ -35,7 +36,7 @@ namespace HappyHouse_Client
             {
 
                 MessageBox.Show("Error: " + ex.Message);
-                return new List<Customer>();
+                return new List<CustomerDTO>();
             }
         }
 
@@ -50,11 +51,7 @@ namespace HappyHouse_Client
 
         }
 
-
-
-
-
-        private async Task<List<Customer>> SearchCustomersAsync(string text)
+        private async Task<List<CustomerDTO>> SearchCustomersAsync(string text)
         {
             var url = $"https://localhost:7176/api/Customers/search?text={text}";
 
@@ -64,7 +61,7 @@ namespace HappyHouse_Client
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
-                var customers = JsonConvert.DeserializeObject<List<Customer>>(responseBody);
+                var customers = JsonConvert.DeserializeObject<List<CustomerDTO>>(responseBody);
 
                 return customers;
             }
@@ -72,7 +69,7 @@ namespace HappyHouse_Client
             {
 
                 MessageBox.Show("Error: " + ex.Message);
-                return new List<Customer>();
+                return new List<CustomerDTO>();
             }
 
             
@@ -80,7 +77,7 @@ namespace HappyHouse_Client
 
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
-            async Task HandleSearchAsync()
+            async void HandleSearchAsync()
             {
                 if (searchTextBox.Text.Length > 0)
                 {
@@ -88,7 +85,7 @@ namespace HappyHouse_Client
                 }
                 else
                 {
-                    LoadCustomersAsync();
+                    await LoadCustomersAsync();
                 }
             }
 
@@ -97,9 +94,9 @@ namespace HappyHouse_Client
 
         }
 
-        public async Task<List<Transaction>> GetTransactionsByIdAsync(int id)
+        private async Task LoadCustomerTransactions(int id)
         {
-            var url = $"https://localhost:7176/api/Transactions/getCustomerTransactions?id={id}";
+            var url = $"https://localhost:7176/api/Transactions/CustomerTransactions/{id}";
 
             try
             {
@@ -113,52 +110,46 @@ namespace HappyHouse_Client
                     MessageBox.Show("لا توجد معاملات لهذا العميل");
 
                 }
-                return transactions;
+                customersDataGridView.DataSource = transactions;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-                return new List<Transaction>();
+                customersDataGridView.DataSource = new List<Transaction>();
             }
+
         }
-
-        private async Task LoadTransactionsCustomer(int id)
-        {
-            var transactions = await GetTransactionsByIdAsync(id);
-            customersDataGridView.DataSource = transactions;
-        }
-
-
-
 
         private void CustomersDataGridStyle()
         {
             customersDataGridView.RowTemplate.Height = 38;
 
             if (isFirst)
-            {
-                
-                customersDataGridView.Columns["CustomerId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            {   
+                //customersDataGridView.Columns["CustomerId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["CustomerName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["Phone"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["RemainingAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersDataGridView.Columns["NumberOfInstallments"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersDataGridView.Columns["DueThisMonth"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                customersDataGridView.Columns["CustomerId"].HeaderText = "كود العميل";
+                customersDataGridView.Columns["CustomerId"].Visible = false;
+                //customersDataGridView.Columns["CustomerId"].HeaderText = "كود العميل";
                 customersDataGridView.Columns["CustomerName"].HeaderText = "إسم العميل";
                 customersDataGridView.Columns["Phone"].HeaderText = "هاتف العميل";
-                customersDataGridView.Columns["RemainingAmount"].HeaderText = "المتبقي عل العميل";
+                customersDataGridView.Columns["RemainingAmount"].HeaderText = "المتبقي على العميل";
+                customersDataGridView.Columns["NumberOfInstallments"].HeaderText = "عدد الأقساط على العميل";
+                customersDataGridView.Columns["DueThisMonth"].HeaderText = "المطلوب سداده هذا الشهر";
             }
             else 
             {
-
                 customersDataGridView.Columns["TransactorName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["Amount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["Description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-
-
                 customersDataGridView.Columns["TransactionId"].Visible = false;
+                customersDataGridView.Columns["InstallmentId"].Visible = false;
                 customersDataGridView.Columns["LedgerId"].Visible = false;
                 customersDataGridView.Columns["CustomerId"].Visible = false;
                 customersDataGridView.Columns["DebtorId"].Visible = false;
@@ -187,7 +178,7 @@ namespace HappyHouse_Client
                     int row_clicked = dataGridView.CurrentRow.Index;
                     int id = (int)dataGridView.Rows[row_clicked].Cells[0].Value;
 
-                    await LoadTransactionsCustomer(id);
+                    await LoadCustomerTransactions(id);
                     CustomersDataGridStyle();
                 }
             }
@@ -202,15 +193,12 @@ namespace HappyHouse_Client
             ((Form1)this.ParentForm).loadform(new new_customer_form());
         }
 
-
         private void xBtn_Click(object sender, EventArgs e)
         {
             isFirst = true;
             xBtn.Visible = false;
             searchTextBox.Text = "";
-
             ((Form1)this.ParentForm).ChangeTitle("العملاء");
-
 
             LoadCustomersAsync();
         }

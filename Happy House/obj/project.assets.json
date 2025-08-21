@@ -1716,9 +1716,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\HappyHouse_client.csproj",
-      "projectName": "HappyHouse_client",
-      "projectPath": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\HappyHouse_client.csproj",
+      "projectUniqueName": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\HappyHouse_Client.csproj",
+      "projectName": "HappyHouse_Client",
+      "projectPath": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\HappyHouse_Client.csproj",
       "packagesPath": "C:\\Users\\A.Nasser\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\A.Nasser\\source\\repos\\HappyHouse\\Happy House\\obj\\",
       "projectStyle": "PackageReference",
@@ -1787,7 +1787,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

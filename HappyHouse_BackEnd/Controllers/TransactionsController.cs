@@ -1,5 +1,4 @@
-﻿using HappyHouse_Server.Services;
-using Microsoft.AspNetCore.Http;
+﻿using HappyHouse_Server.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HappyHouse_Server.Controllers
@@ -8,9 +7,9 @@ namespace HappyHouse_Server.Controllers
     [ApiController]
     public class TransactionsController : ControllerBase
     {
-        private readonly TransactionsService _transactionsService;
+        private readonly ITransactionsService _transactionsService;
 
-        public TransactionsController(TransactionsService transactionsService)
+        public TransactionsController(ITransactionsService transactionsService)
         {
             _transactionsService = transactionsService;
         }
@@ -22,7 +21,7 @@ namespace HappyHouse_Server.Controllers
             var transactions = await _transactionsService.GetAllTransactionsAsync();
             return Ok(transactions);
         }
-        [HttpGet("getCustomerTransactions")]
+        [HttpGet("CustomerTransactions/{id}")]
         public async Task<IActionResult> GetCustomerTransactionsAsync(int id)
         {
             var transactions = await _transactionsService.GetCustomerTransactionsAsync(id);
@@ -33,7 +32,7 @@ namespace HappyHouse_Server.Controllers
             return Ok(transactions);
         }
 
-        [HttpGet("getLedgerTransactions")]
+        [HttpGet("LedgerTransactions/{id}")]
         public async Task<IActionResult> GetLedgerTransactionsAsync(int id)
         {
             var transactions = await _transactionsService.GetLedgerTransactionsAsync(id);

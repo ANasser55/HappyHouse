@@ -1,7 +1,12 @@
 using HappyHouse_Server.Controllers;
 using HappyHouse_Server.Data;
 using HappyHouse_Server.Services;
+using HappyHouse_Server.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,11 +18,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<HappyHouseDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("constr")));
-builder.Services.AddScoped<CustomersService>();
-builder.Services.AddScoped<CustomerRegistrationService>();
-builder.Services.AddScoped<TransactionsService>();
-builder.Services.AddScoped<InstallmentsService>();
-builder.Services.AddScoped<LedgerService>();
+builder.Services.AddScoped<ICustomersService, CustomersService>();
+builder.Services.AddScoped<ICustomerRegistrationService, CustomerRegistrationService>();
+builder.Services.AddScoped<ITransactionsService, TransactionsService>();
+builder.Services.AddScoped<IInstallmentsService, InstallmentsService>();
+builder.Services.AddScoped<ILedgerService, LedgerService>();
 
 var app = builder.Build();
 

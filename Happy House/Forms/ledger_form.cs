@@ -108,7 +108,7 @@ namespace HappyHouse_Client
 
         private async Task LoadTransactions(int id)
         {
-            var url = $"https://localhost:7176/api/Transactions/getLedgerTransactions?id={id}";
+            var url = $"https://localhost:7176/api/Transactions/LedgerTransactions/{id}";
 
             try
             {

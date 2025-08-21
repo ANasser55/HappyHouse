@@ -11,7 +11,6 @@ C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\H
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.new_installment_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.reports_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.safebox_form.resources
-C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.this_month_installments_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.Properties.Resources.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.csproj.GenerateResource.cache
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.GeneratedMSBuildEditorConfig.editorconfig

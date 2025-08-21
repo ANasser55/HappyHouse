@@ -1,11 +1,12 @@
 ﻿using HappyHouse_Server.Data;
 using HappyHouse_Server.DTO;
 using HappyHouse_Server.Models;
+using HappyHouse_Server.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace HappyHouse_Server.Services
 {
-    public class InstallmentsService
+    public class InstallmentsService : IInstallmentsService
     {
         private readonly HappyHouseDbContext _context;
 
@@ -20,29 +21,39 @@ namespace HappyHouse_Server.Services
             return installments;
         }
 
-        public async Task<List<Installment>> GetCustomerInstallmentsAsync(int customerId)
+        public async Task<List<InstallmentDTO>> GetCustomerInstallmentsAsync(int customerId)
         {
-            var installments = await _context.Installments
-                .Where(i => i.CustomerId == customerId)
-                .ToListAsync();
+            var installments = await _context.Installments.Where(i => i.CustomerId == customerId).Select(i => new InstallmentDTO
+            {
+                CustomerName = i.Customer.CustomerName,
+                TotalAmount = i.TotalAmount,
+                PaymentPerMonth = i.PaymentPerMonth,
+                RemainingAmount = i.RemainingAmount,
+                DueDate = i.DueDate,
+                DelayDays = Math.Max(0, (DateTime.Now.Date - i.DueDate.Date).Days),
+                RemainingInstallments = (int)(i.RemainingAmount / i.PaymentPerMonth + 0.5m),
+                Description = i.Description
+
+            }).ToListAsync();
+
             return installments;
         }
 
-        public async Task<List<MonthInstallmentDTO>> GetMonthInstallmentsAsync()
+        public async Task<List<InstallmentDTO>> GetMonthInstallmentsAsync()
         {
-            var installments = await _context.Installments.Where(i => i.isPaid == false).Where(i => i.NextDate <= DateTime.Now).Include(i => i.Customer).ToListAsync();
-            var monthInstallments = new List<MonthInstallmentDTO>();
+            var installments = await _context.Installments.Where(i => i.isPaid == false).Where(i => i.DueDate <= DateTime.Now).Include(i => i.Customer).ToListAsync();
+            var monthInstallments = new List<InstallmentDTO>();
             foreach (var installment in installments)
             {
-                monthInstallments.Add(new MonthInstallmentDTO
+                monthInstallments.Add(new InstallmentDTO
                 {
                     CustomerName = installment.Customer.CustomerName,
                     TotalAmount = installment.TotalAmount,
                     PaymentPerMonth = installment.PaymentPerMonth,
-                    NextDate = installment.NextDate,
-                    DelayDays = installment.DelayDays,
+                    DueDate = installment.DueDate,
                     RemainingAmount = installment.RemainingAmount,
-                    RemainingInstallments = installment.RemainingInstallments,
+                    DelayDays = Math.Max(0, (DateTime.Now.Date - installment.DueDate.Date).Days),
+                    RemainingInstallments = (int)(installment.RemainingAmount / installment.PaymentPerMonth + 0.5m),
                     Description = installment.Description
                 });
             }

@@ -2,16 +2,19 @@
 using HappyHouse_Client.Models;
 using HappyHouse_Client.Old;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 
 
 namespace HappyHouse_Client
 {
-    public partial class installment_form : Form
+    public partial class Installment_form : Form
     {
         private readonly HttpClient _client = new HttpClient();
 
-        public installment_form()
+        bool isFirst = true;
+
+        public Installment_form()
         {
             InitializeComponent();
 
@@ -25,34 +28,38 @@ namespace HappyHouse_Client
 
             if (isFirst)
             {
-                customersInstallmentsDataGridView.Columns["customer_id"].Width = 150;
-                customersInstallmentsDataGridView.Columns["customer_name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                customersInstallmentsDataGridView.Columns["customer_phone"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                customersInstallmentsDataGridView.Columns["customer_next_payment"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                customersInstallmentsDataGridView.Columns["customer_total_remaining"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                customersInstallmentsDataGridView.Columns["customer_id"].HeaderText = "كود العميل";
-                customersInstallmentsDataGridView.Columns["customer_name"].HeaderText = "إسم العميل";
-                customersInstallmentsDataGridView.Columns["customer_phone"].HeaderText = "هاتف العميل";
-                customersInstallmentsDataGridView.Columns["customer_next_payment"].HeaderText = "المطلوب سداده هذا الشهر";
-                customersInstallmentsDataGridView.Columns["customer_total_remaining"].HeaderText = "المتبقي على العميل";
+                //customersDataGridView.Columns["CustomerId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["CustomerName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["Phone"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["RemainingAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["NumberOfInstallments"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["DueThisMonth"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                customersInstallmentsDataGridView.Columns["CustomerId"].Visible = false;
+
+                customersInstallmentsDataGridView.Columns["CustomerName"].HeaderText = "إسم العميل";
+                customersInstallmentsDataGridView.Columns["Phone"].HeaderText = "هاتف العميل";
+                customersInstallmentsDataGridView.Columns["RemainingAmount"].HeaderText = "المتبقي على العميل";
+                customersInstallmentsDataGridView.Columns["NumberOfInstallments"].HeaderText = "عدد الأقساط على العميل";
+                customersInstallmentsDataGridView.Columns["DueThisMonth"].HeaderText = "المطلوب سداده هذا الشهر";
             }
             else
             {
-                customersInstallmentsDataGridView.Columns["installment_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                customersInstallmentsDataGridView.Columns["customer_name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                customersInstallmentsDataGridView.Columns["installment_amount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                customersInstallmentsDataGridView.Columns["next_date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                customersInstallmentsDataGridView.Columns["remaining"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                customersInstallmentsDataGridView.Columns["description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["TotalAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["PaymentPerMonth"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["DueDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["RemainingInstallments"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["DelayDays"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                customersInstallmentsDataGridView.Columns["Description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
                 //ledgerDataGridView.Columns["transaction_id"].Visible = false;
-                customersInstallmentsDataGridView.Columns["customer_name"].HeaderText = "اسم العميل";
-                customersInstallmentsDataGridView.Columns["installment_id"].HeaderText = "رقم القسط";
-                customersInstallmentsDataGridView.Columns["installment_amount"].HeaderText = "قيمة القسط";
-                customersInstallmentsDataGridView.Columns["next_date"].HeaderText = "تاريخ استحقاق القسط القادم";
-                customersInstallmentsDataGridView.Columns["remaining"].HeaderText = "المتبقي";
-                customersInstallmentsDataGridView.Columns["description"].HeaderText = "ملاحظات";
+                customersInstallmentsDataGridView.Columns["TotalAmount"].HeaderText = "قيمة القسط";
+                customersInstallmentsDataGridView.Columns["PaymentPerMonth"].HeaderText = "المبلغ الشهري";
+                customersInstallmentsDataGridView.Columns["DueDate"].HeaderText = "تاريخ استحقاق القسط القادم";
+                customersInstallmentsDataGridView.Columns["RemainingInstallments"].HeaderText = "الأقساط المتبقية";
+                customersInstallmentsDataGridView.Columns["DelayDays"].HeaderText = "أيام التأخير";
+                customersInstallmentsDataGridView.Columns["Description"].HeaderText = "ملاحظات";
 
             }
         }
@@ -63,7 +70,7 @@ namespace HappyHouse_Client
             //customersInstallmentsDataGridView.Columns["CustomerId"].Visible = false;
 
             customersInstallmentsDataGridView.Columns["CustomerName"].HeaderText = "اسم العميل";
-            customersInstallmentsDataGridView.Columns["NextDate"].HeaderText = "تاريخ الإستحقاق";
+            customersInstallmentsDataGridView.Columns["DueDate"].HeaderText = "تاريخ الإستحقاق";
             customersInstallmentsDataGridView.Columns["TotalAmount"].HeaderText = "المبلغ المراد تقسيطه";
             customersInstallmentsDataGridView.Columns["PaymentPerMonth"].HeaderText = "قيمة القسط";
             customersInstallmentsDataGridView.Columns["RemainingAmount"].HeaderText = "المتبقي";
@@ -73,52 +80,89 @@ namespace HappyHouse_Client
 
             customersInstallmentsDataGridView.Columns["CustomerName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["TotalAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
-            customersInstallmentsDataGridView.Columns["NextDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
+            customersInstallmentsDataGridView.Columns["DueDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["PaymentPerMonth"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["RemainingAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["RemainingInstallments"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["DelayDays"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
             customersInstallmentsDataGridView.Columns["Description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; ;
         }
-        private void LoadCustomers()
+        private async Task LoadCustomers()
         {
-            Customers_DAO customers_DAO = new Customers_DAO();
-            customers_DAO.calculate_installments();
 
-            customersBindingSource.DataSource = customers_DAO.getAllCustomers();
-            customersInstallmentsDataGridView.DataSource = customersBindingSource;
+            var url = "https://localhost:7176/api/Customers";
+
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+
+                string responseBody = await response.Content.ReadAsStringAsync();
+                var customers = JsonConvert.DeserializeObject<List<CustomerDTO>>(responseBody);
+
+                customersInstallmentsDataGridView.DataSource = customers;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+                customersInstallmentsDataGridView.DataSource = new List<CustomerDTO>();
+            }
+
 
             InstallmentsDataGridStyle();
         }
 
-        BindingSource customersBindingSource = new BindingSource();
-        bool isFirst = true;
 
-
-        private void LoadInstallments(int id)
+        private async Task LoadInstallmentsAsync(int id)
         {
-            InstallmentsForCustomerDAO installmentsForCustomerDAO = new InstallmentsForCustomerDAO();
-            customersBindingSource.DataSource = installmentsForCustomerDAO.getCustomerInstallments(id);
-            customersInstallmentsDataGridView.DataSource = customersBindingSource;
+            var url = $"https://localhost:7176/api/Installments/customer/{id}";
+
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+
+                var body = await response.Content.ReadAsStringAsync();
+                var installments = JsonConvert.DeserializeObject<List<InstallmentDTO>>(body);
+
+                customersInstallmentsDataGridView.DataSource = installments;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                customersInstallmentsDataGridView.DataSource = new List<InstallmentDTO>();
+            }
 
             InstallmentsDataGridStyle();
 
-
         }
 
-        private void SearchCustomers()
+        private async Task SearchCustomersAsync(string text)
         {
-            Customers_DAO customers_DAO = new Customers_DAO();
-            customersBindingSource.DataSource = customers_DAO.searchCustomers(searchTextBox.Text);
-            customersInstallmentsDataGridView.DataSource = customersBindingSource;
-            customersInstallmentsDataGridView.Columns["customer_id"].HeaderText = "كود العميل";
-            customersInstallmentsDataGridView.Columns["customer_name"].HeaderText = "إسم العميل";
-            customersInstallmentsDataGridView.Columns["customer_phone"].HeaderText = "هاتف العميل";
-            customersInstallmentsDataGridView.Columns["customer_next_payment"].HeaderText = "المطلوب سداده هذا الشهر";
-            customersInstallmentsDataGridView.Columns["customer_total_remaining"].HeaderText = "المتبقي على العميل";
+            var url = $"https://localhost:7176/api/Customers/search?text={text}";
+
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+
+                string responseBody = await response.Content.ReadAsStringAsync();
+                var customers = JsonConvert.DeserializeObject<List<CustomerDTO>>(responseBody);
+
+                customersInstallmentsDataGridView.DataSource = customers;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+                customersInstallmentsDataGridView.DataSource = new List<CustomerDTO>();
+            }
+
+
         }
 
-        private async Task<List<MonthInstallmentDTO>> GetThisMonthInstallments()
+        private async Task LoadMonthInstallmentsAsync()
         {
             var url = "https://localhost:7176/api/Installments/month";
 
@@ -128,21 +172,15 @@ namespace HappyHouse_Client
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
-                var Installments = JsonConvert.DeserializeObject<List<MonthInstallmentDTO>>(responseBody);
-                return Installments;
+                var Installments = JsonConvert.DeserializeObject<List<InstallmentDTO>>(responseBody);
+                customersInstallmentsDataGridView.DataSource = Installments;
             }
             catch (Exception)
             {
 
-                return new List<MonthInstallmentDTO>();
+                customersInstallmentsDataGridView.DataSource = new List<InstallmentDTO>();
             }
 
-        }
-
-        private async Task LoadMonthInstallments()
-        {
-
-            customersInstallmentsDataGridView.DataSource = await GetThisMonthInstallments();
             MonthInstallmentsDataGridStyle();
 
         }
@@ -151,18 +189,21 @@ namespace HappyHouse_Client
         {
             Customers_DAO customers_DAO = new Customers_DAO();
 
-            if (searchTextBox.Text.Length > 0)
+            async void handleSearch()
             {
-                SearchCustomers();
+                if (searchTextBox.Text.Length > 0)
+                {
+                    await SearchCustomersAsync(searchTextBox.Text);
+                }
+                else
+                {
+                    await LoadCustomers();
+                }
             }
-            else
-            {
-                LoadCustomers();
-            }
+
+            handleSearch();
             xBtn.Visible = false;
             isFirst = true;
-
-
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -177,11 +218,14 @@ namespace HappyHouse_Client
                 int row_clicked = dataGridView.CurrentRow.Index;
                 int id = (int)dataGridView.Rows[row_clicked].Cells[0].Value;
 
-                LoadInstallments(id);
+                async void doubleClickHandler()
+                {
+                    await LoadInstallmentsAsync(id);
 
+                }
+
+                doubleClickHandler();
             }
-
-
         }
 
         private void month_installments_btn_Click(object sender, EventArgs e)
@@ -191,7 +235,7 @@ namespace HappyHouse_Client
 
             async void MonthInstallmentsHandler()
             {
-                await LoadMonthInstallments();
+                await LoadMonthInstallmentsAsync();
             }
 
             MonthInstallmentsHandler();

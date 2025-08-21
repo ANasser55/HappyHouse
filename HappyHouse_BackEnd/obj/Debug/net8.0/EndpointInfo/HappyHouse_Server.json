@@ -48,29 +48,6 @@
         }
       }
     },
-    "/api/Customers/{id}": {
-      "get": {
-        "tags": [
-          "Customers"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Customers/search": {
       "get": {
         "tags": [
@@ -185,7 +162,7 @@
         }
       }
     },
-    "/api/Transactions/getCustomerTransactions": {
+    "/api/Transactions/CustomerTransactions/{id}": {
       "get": {
         "tags": [
           "Transactions"
@@ -193,7 +170,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -207,7 +185,7 @@
         }
       }
     },
-    "/api/Transactions/getLedgerTransactions": {
+    "/api/Transactions/LedgerTransactions/{id}": {
       "get": {
         "tags": [
           "Transactions"
@@ -215,7 +193,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -246,10 +225,6 @@
           "phone": {
             "type": "string",
             "nullable": true
-          },
-          "remainingAmount": {
-            "type": "number",
-            "format": "double"
           },
           "installments": {
             "type": "array",
@@ -321,7 +296,7 @@
             "type": "string",
             "format": "date-time"
           },
-          "nextDate": {
+          "dueDate": {
             "type": "string",
             "format": "date-time"
           },
@@ -331,16 +306,6 @@
           "description": {
             "type": "string",
             "nullable": true
-          },
-          "delayDays": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "remainingInstallments": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
           },
           "customer": {
             "$ref": "#/components/schemas/Customer"

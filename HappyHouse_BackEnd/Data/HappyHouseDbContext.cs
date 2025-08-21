@@ -32,7 +32,6 @@ namespace HappyHouse_Server.Data
             modelBuilder.Entity<Customer>().Property(c => c.CustomerId).HasColumnName("customer_id");
             modelBuilder.Entity<Customer>().Property(c => c.CustomerName).HasColumnName("customer_name");
             modelBuilder.Entity<Customer>().Property(c => c.Phone).HasColumnName("customer_phone");
-            modelBuilder.Entity<Customer>().Property(c => c.RemainingAmount).HasColumnName("customer_remaining");
 
             modelBuilder.Entity<Installment>().Property(i => i.InstallmentId).HasColumnName("installment_id");
             modelBuilder.Entity<Installment>().Property(i => i.CustomerId).HasColumnName("customer_id");
@@ -40,7 +39,7 @@ namespace HappyHouse_Server.Data
             modelBuilder.Entity<Installment>().Property(i => i.PaymentPerMonth).HasColumnName("payment_per_month");
             modelBuilder.Entity<Installment>().Property(i => i.RemainingAmount).HasColumnName("remaining_amount");
             modelBuilder.Entity<Installment>().Property(i => i.StartDate).HasColumnName("start_date");
-            modelBuilder.Entity<Installment>().Property(i => i.NextDate).HasColumnName("next_date");
+            modelBuilder.Entity<Installment>().Property(i => i.DueDate).HasColumnName("next_date");
             modelBuilder.Entity<Installment>().Property(i => i.isPaid).HasColumnName("paid");
             modelBuilder.Entity<Installment>().Property(i => i.Description).HasColumnName("description");
 

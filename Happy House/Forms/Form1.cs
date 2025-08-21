@@ -24,7 +24,7 @@
             f.Show();
         }
 
-        public List<int> darken(double factor, int r, int g, int b)
+        public List<int> Darken(double factor, int r, int g, int b)
         {
             List<int> dark_color = new List<int>();
             r = (int)(r * factor);
@@ -47,53 +47,53 @@
             title_text.Location = new Point(newX, title_text.Location.Y);
         }
 
-        private void minimize_btn_Click(object sender, EventArgs e)
+        private void MinimizeBtnClick(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
 
-        private void عملاءBtn_Click(object sender, EventArgs e)
+        private void CustomersBtn_Click(object sender, EventArgs e)
         {
             ChangeTitle("العملاء");
-            عملاءBtn.BackColor = Color.FromArgb(19, 74, 93);
-            الأقساطbtn.BackColor = Color.FromArgb(14, 52, 65);
-            اليوميةbtn.BackColor = Color.FromArgb(14, 52, 65);
-            الخزنةbtn.BackColor = Color.FromArgb(14, 52, 65);
+            CustomersBtn.BackColor = Color.FromArgb(19, 74, 93);
+            InstallmentsBtn.BackColor = Color.FromArgb(14, 52, 65);
+            LedgerBtn.BackColor = Color.FromArgb(14, 52, 65);
+            SafeBtn.BackColor = Color.FromArgb(14, 52, 65);
 
 
             loadform(new customers_form());
         }
-        private void الأقساطbtn_Click(object sender, EventArgs e)
+        private void InstallmentsBtn_Click(object sender, EventArgs e)
         {
             ChangeTitle("الأقساط");
-            عملاءBtn.BackColor = Color.FromArgb(14, 52, 65);
-            الأقساطbtn.BackColor = Color.FromArgb(19, 74, 93);
-            اليوميةbtn.BackColor = Color.FromArgb(14, 52, 65);
-            الخزنةbtn.BackColor = Color.FromArgb(14, 52, 65);
+            CustomersBtn.BackColor = Color.FromArgb(14, 52, 65);
+            InstallmentsBtn.BackColor = Color.FromArgb(19, 74, 93);
+            LedgerBtn.BackColor = Color.FromArgb(14, 52, 65);
+            SafeBtn.BackColor = Color.FromArgb(14, 52, 65);
 
-            loadform(new installment_form());
+            loadform(new Installment_form());
         }
 
-        private void اليوميةbtn_Click(object sender, EventArgs e)
+        private void LedgerBtn_Click(object sender, EventArgs e)
         {
             ChangeTitle("اليومية");
-            عملاءBtn.BackColor = Color.FromArgb(14, 52, 65);
-            الأقساطbtn.BackColor = Color.FromArgb(14, 52, 65);
-            اليوميةbtn.BackColor = Color.FromArgb(19, 74, 93);
-            الخزنةbtn.BackColor = Color.FromArgb(14, 52, 65);
+            CustomersBtn.BackColor = Color.FromArgb(14, 52, 65);
+            InstallmentsBtn.BackColor = Color.FromArgb(14, 52, 65);
+            LedgerBtn.BackColor = Color.FromArgb(19, 74, 93);
+            SafeBtn.BackColor = Color.FromArgb(14, 52, 65);
 
 
             loadform(new ledger_form());
         }
 
-        private void الخزنةbtn_Click(object sender, EventArgs e)
+        private void SafeBtn_Click(object sender, EventArgs e)
         {
             ChangeTitle("الخزنة");
-            عملاءBtn.BackColor = Color.FromArgb(14, 52, 65);
-            الأقساطbtn.BackColor = Color.FromArgb(14, 52, 65);
-            اليوميةbtn.BackColor = Color.FromArgb(14, 52, 65);
-            الخزنةbtn.BackColor = Color.FromArgb(19, 74, 93);
+            CustomersBtn.BackColor = Color.FromArgb(14, 52, 65);
+            InstallmentsBtn.BackColor = Color.FromArgb(14, 52, 65);
+            LedgerBtn.BackColor = Color.FromArgb(14, 52, 65);
+            SafeBtn.BackColor = Color.FromArgb(19, 74, 93);
 
 
 
@@ -103,7 +103,7 @@
         }
 
 
-        private void mainpanel_Paint(object sender, PaintEventArgs e)
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
         {
             if (x == 0)
             {
@@ -113,7 +113,7 @@
 
         }
 
-        private void maxmize_btn_Click(object sender, EventArgs e)
+        private void Maxmize_btn_Click(object sender, EventArgs e)
         {
             if (WindowState.ToString() == "Normal")
             {

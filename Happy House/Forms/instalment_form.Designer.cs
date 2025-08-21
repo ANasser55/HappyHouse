@@ -1,6 +1,6 @@
 ﻿namespace HappyHouse_Client
 {
-    partial class installment_form
+    partial class Installment_form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(installment_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Installment_form));
             customersInstallmentsDataGridView = new DataGridView();
             searchTextBox = new TextBox();
             month_installments_btn = new Button();

@@ -306,13 +306,12 @@ namespace HappyHouse_Client
 
             customer.CustomerName = nameTextBox.Text;
             customer.Phone = phoneTextBox.Text;
-            customer.RemainingAmount = amount;
 
-            installment.Amount = amount;
+            installment.TotalAmount = amount;
             installment.PaymentPerMonth = installmentAmount;
             installment.RemainingAmount = amount;
             installment.StartDate = InstallmentDateTimePicker.Value;
-            installment.NextDate = InstallmentDateTimePicker.Value.AddMonths(1);
+            installment.DueDate = InstallmentDateTimePicker.Value.AddMonths(1);
             installment.isPaid = false;
             installment.Description = descriptionTextBox.Text;
 

@@ -1,11 +1,12 @@
 ﻿using HappyHouse_Server.Data;
 using HappyHouse_Server.Models;
+using HappyHouse_Server.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 namespace HappyHouse_Server.Services
 {
-    public class CustomerRegistrationService
+    public class CustomerRegistrationService : ICustomerRegistrationService
     {
         private readonly HappyHouseDbContext _context;
 
@@ -29,7 +30,7 @@ namespace HappyHouse_Server.Services
 
         public async Task AddNewCustomer(Customer customer, Installment installment, Transaction transaction)
         {
-            
+
 
             var databaseTransaction = _context.Database.BeginTransaction();
             try
@@ -47,7 +48,7 @@ namespace HappyHouse_Server.Services
                     await _context.SaveChangesAsync();
 
 
-                    
+
                     transaction.CustomerId = customer.CustomerId;
                     transaction.InstallmentId = installment.InstallmentId;
                     transaction.DebtorId = null;

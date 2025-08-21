@@ -1,10 +1,11 @@
 ﻿using HappyHouse_Server.Data;
+using HappyHouse_Server.Interfaces;
 using HappyHouse_Server.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HappyHouse_Server.Services
 {
-    public class TransactionsService
+    public class TransactionsService : ITransactionsService
     {
         private readonly HappyHouseDbContext _context;
 

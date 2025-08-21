@@ -38,12 +38,12 @@
             panel2 = new Panel();
             button1 = new Button();
             التقاريرbtn = new Button();
-            عملاءBtn = new Button();
+            CustomersBtn = new Button();
             logoPanel = new Panel();
             label1 = new Label();
-            الخزنةbtn = new Button();
-            اليوميةbtn = new Button();
-            الأقساطbtn = new Button();
+            SafeBtn = new Button();
+            LedgerBtn = new Button();
+            InstallmentsBtn = new Button();
             mainpanel = new Panel();
             headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logoPictureBox).BeginInit();
@@ -61,7 +61,7 @@
             headerPanel.Controls.Add(minimize_btn);
             headerPanel.Location = new Point(220, 0);
             headerPanel.Name = "headerPanel";
-            headerPanel.Size = new Size(1147, 77);
+            headerPanel.Size = new Size(1147, 73);
             headerPanel.TabIndex = 0;
             headerPanel.MouseDown += headerPanel_MouseDown;
             headerPanel.MouseMove += headerPanel_MouseMove;
@@ -72,10 +72,10 @@
             title_text.AutoSize = true;
             title_text.Font = new Font("Goudy Stout", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             title_text.ForeColor = Color.White;
-            title_text.Location = new Point(506, 12);
+            title_text.Location = new Point(506, 11);
             title_text.Name = "title_text";
             title_text.RightToLeft = RightToLeft.Yes;
-            title_text.Size = new Size(114, 41);
+            title_text.Size = new Size(91, 32);
             title_text.TabIndex = 6;
             title_text.Text = "الرئيسية";
             title_text.TextAlign = ContentAlignment.MiddleCenter;
@@ -88,9 +88,9 @@
             colse_btn.FlatAppearance.BorderSize = 0;
             colse_btn.FlatStyle = FlatStyle.Flat;
             colse_btn.ForeColor = SystemColors.ControlText;
-            colse_btn.Location = new Point(1093, 15);
+            colse_btn.Location = new Point(1093, 14);
             colse_btn.Name = "colse_btn";
-            colse_btn.Size = new Size(32, 32);
+            colse_btn.Size = new Size(32, 30);
             colse_btn.TabIndex = 5;
             colse_btn.UseVisualStyleBackColor = true;
             colse_btn.Click += colse_btn_Click;
@@ -102,12 +102,12 @@
             maxmize_btn.BackgroundImageLayout = ImageLayout.Stretch;
             maxmize_btn.FlatAppearance.BorderSize = 0;
             maxmize_btn.FlatStyle = FlatStyle.Flat;
-            maxmize_btn.Location = new Point(1043, 15);
+            maxmize_btn.Location = new Point(1043, 14);
             maxmize_btn.Name = "maxmize_btn";
-            maxmize_btn.Size = new Size(32, 32);
+            maxmize_btn.Size = new Size(32, 30);
             maxmize_btn.TabIndex = 2;
             maxmize_btn.UseVisualStyleBackColor = true;
-            maxmize_btn.Click += maxmize_btn_Click;
+            maxmize_btn.Click += Maxmize_btn_Click;
             // 
             // minimize_btn
             // 
@@ -116,20 +116,20 @@
             minimize_btn.BackgroundImageLayout = ImageLayout.Stretch;
             minimize_btn.FlatAppearance.BorderSize = 0;
             minimize_btn.FlatStyle = FlatStyle.Flat;
-            minimize_btn.Location = new Point(995, 15);
+            minimize_btn.Location = new Point(995, 14);
             minimize_btn.Name = "minimize_btn";
             minimize_btn.RightToLeft = RightToLeft.No;
-            minimize_btn.Size = new Size(32, 32);
+            minimize_btn.Size = new Size(32, 30);
             minimize_btn.TabIndex = 3;
             minimize_btn.UseVisualStyleBackColor = true;
-            minimize_btn.Click += minimize_btn_Click;
+            minimize_btn.Click += MinimizeBtnClick;
             // 
             // logoPictureBox
             // 
             logoPictureBox.Image = Properties.Resources.logo;
             logoPictureBox.Location = new Point(12, 3);
             logoPictureBox.Name = "logoPictureBox";
-            logoPictureBox.Size = new Size(72, 74);
+            logoPictureBox.Size = new Size(72, 70);
             logoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             logoPictureBox.TabIndex = 0;
             logoPictureBox.TabStop = false;
@@ -139,15 +139,15 @@
             panel2.BackColor = Color.FromArgb(14, 52, 65);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(التقاريرbtn);
-            panel2.Controls.Add(عملاءBtn);
+            panel2.Controls.Add(CustomersBtn);
             panel2.Controls.Add(logoPanel);
-            panel2.Controls.Add(الخزنةbtn);
-            panel2.Controls.Add(اليوميةbtn);
-            panel2.Controls.Add(الأقساطbtn);
+            panel2.Controls.Add(SafeBtn);
+            panel2.Controls.Add(LedgerBtn);
+            panel2.Controls.Add(InstallmentsBtn);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(220, 747);
+            panel2.Size = new Size(220, 710);
             panel2.TabIndex = 0;
             // 
             // button1
@@ -158,9 +158,9 @@
             button1.ForeColor = Color.White;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 628);
+            button1.Location = new Point(0, 597);
             button1.Name = "button1";
-            button1.Size = new Size(217, 105);
+            button1.Size = new Size(217, 100);
             button1.TabIndex = 4;
             button1.Text = "  الديون";
             button1.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -174,31 +174,31 @@
             التقاريرbtn.ForeColor = Color.White;
             التقاريرbtn.Image = (Image)resources.GetObject("التقاريرbtn.Image");
             التقاريرbtn.ImageAlign = ContentAlignment.MiddleLeft;
-            التقاريرbtn.Location = new Point(-3, 519);
+            التقاريرbtn.Location = new Point(-3, 493);
             التقاريرbtn.Name = "التقاريرbtn";
-            التقاريرbtn.Size = new Size(217, 105);
+            التقاريرbtn.Size = new Size(217, 100);
             التقاريرbtn.TabIndex = 3;
             التقاريرbtn.Text = "  التقارير";
             التقاريرbtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             التقاريرbtn.UseVisualStyleBackColor = true;
             التقاريرbtn.Click += التقاريرbtn_Click;
             // 
-            // عملاءBtn
+            // CustomersBtn
             // 
-            عملاءBtn.FlatAppearance.BorderSize = 0;
-            عملاءBtn.FlatStyle = FlatStyle.Flat;
-            عملاءBtn.Font = new Font("Goudy Stout", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            عملاءBtn.ForeColor = Color.WhiteSmoke;
-            عملاءBtn.Image = (Image)resources.GetObject("عملاءBtn.Image");
-            عملاءBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            عملاءBtn.Location = new Point(3, 83);
-            عملاءBtn.Name = "عملاءBtn";
-            عملاءBtn.Size = new Size(217, 105);
-            عملاءBtn.TabIndex = 2;
-            عملاءBtn.Text = "  العملاء";
-            عملاءBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            عملاءBtn.UseVisualStyleBackColor = true;
-            عملاءBtn.Click += عملاءBtn_Click;
+            CustomersBtn.FlatAppearance.BorderSize = 0;
+            CustomersBtn.FlatStyle = FlatStyle.Flat;
+            CustomersBtn.Font = new Font("Goudy Stout", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CustomersBtn.ForeColor = Color.WhiteSmoke;
+            CustomersBtn.Image = (Image)resources.GetObject("CustomersBtn.Image");
+            CustomersBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            CustomersBtn.Location = new Point(3, 79);
+            CustomersBtn.Name = "CustomersBtn";
+            CustomersBtn.Size = new Size(217, 100);
+            CustomersBtn.TabIndex = 2;
+            CustomersBtn.Text = "  العملاء";
+            CustomersBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            CustomersBtn.UseVisualStyleBackColor = true;
+            CustomersBtn.Click += CustomersBtn_Click;
             // 
             // logoPanel
             // 
@@ -208,86 +208,86 @@
             logoPanel.Dock = DockStyle.Top;
             logoPanel.Location = new Point(0, 0);
             logoPanel.Name = "logoPanel";
-            logoPanel.Size = new Size(220, 77);
+            logoPanel.Size = new Size(220, 73);
             logoPanel.TabIndex = 1;
             // 
             // label1
             // 
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(90, 12);
+            label1.Location = new Point(90, 11);
             label1.Name = "label1";
-            label1.Size = new Size(104, 59);
+            label1.Size = new Size(104, 56);
             label1.TabIndex = 1;
             label1.Text = "Happy House";
             // 
-            // الخزنةbtn
+            // SafeBtn
             // 
-            الخزنةbtn.FlatAppearance.BorderSize = 0;
-            الخزنةbtn.FlatStyle = FlatStyle.Flat;
-            الخزنةbtn.Font = new Font("Goudy Stout", 13.8F, FontStyle.Bold);
-            الخزنةbtn.ForeColor = Color.White;
-            الخزنةbtn.Image = Properties.Resources.safebox;
-            الخزنةbtn.ImageAlign = ContentAlignment.MiddleLeft;
-            الخزنةbtn.Location = new Point(3, 410);
-            الخزنةbtn.Name = "الخزنةbtn";
-            الخزنةbtn.Size = new Size(217, 105);
-            الخزنةbtn.TabIndex = 1;
-            الخزنةbtn.Text = "  الخزنة";
-            الخزنةbtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            الخزنةbtn.UseVisualStyleBackColor = true;
-            الخزنةbtn.Click += الخزنةbtn_Click;
+            SafeBtn.FlatAppearance.BorderSize = 0;
+            SafeBtn.FlatStyle = FlatStyle.Flat;
+            SafeBtn.Font = new Font("Goudy Stout", 13.8F, FontStyle.Bold);
+            SafeBtn.ForeColor = Color.White;
+            SafeBtn.Image = Properties.Resources.safebox;
+            SafeBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            SafeBtn.Location = new Point(3, 390);
+            SafeBtn.Name = "SafeBtn";
+            SafeBtn.Size = new Size(217, 100);
+            SafeBtn.TabIndex = 1;
+            SafeBtn.Text = "  الخزنة";
+            SafeBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            SafeBtn.UseVisualStyleBackColor = true;
+            SafeBtn.Click += SafeBtn_Click;
             // 
-            // اليوميةbtn
+            // LedgerBtn
             // 
-            اليوميةbtn.FlatAppearance.BorderSize = 0;
-            اليوميةbtn.FlatStyle = FlatStyle.Flat;
-            اليوميةbtn.Font = new Font("Goudy Stout", 13.8F, FontStyle.Bold);
-            اليوميةbtn.ForeColor = Color.White;
-            اليوميةbtn.Image = Properties.Resources.ledger;
-            اليوميةbtn.ImageAlign = ContentAlignment.MiddleLeft;
-            اليوميةbtn.Location = new Point(0, 301);
-            اليوميةbtn.Name = "اليوميةbtn";
-            اليوميةbtn.Size = new Size(217, 105);
-            اليوميةbtn.TabIndex = 1;
-            اليوميةbtn.Text = "  اليومية";
-            اليوميةbtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            اليوميةbtn.UseVisualStyleBackColor = true;
-            اليوميةbtn.Click += اليوميةbtn_Click;
+            LedgerBtn.FlatAppearance.BorderSize = 0;
+            LedgerBtn.FlatStyle = FlatStyle.Flat;
+            LedgerBtn.Font = new Font("Goudy Stout", 13.8F, FontStyle.Bold);
+            LedgerBtn.ForeColor = Color.White;
+            LedgerBtn.Image = Properties.Resources.ledger;
+            LedgerBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            LedgerBtn.Location = new Point(0, 286);
+            LedgerBtn.Name = "LedgerBtn";
+            LedgerBtn.Size = new Size(217, 100);
+            LedgerBtn.TabIndex = 1;
+            LedgerBtn.Text = "  اليومية";
+            LedgerBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            LedgerBtn.UseVisualStyleBackColor = true;
+            LedgerBtn.Click += LedgerBtn_Click;
             // 
-            // الأقساطbtn
+            // InstallmentsBtn
             // 
-            الأقساطbtn.FlatAppearance.BorderSize = 0;
-            الأقساطbtn.FlatStyle = FlatStyle.Flat;
-            الأقساطbtn.Font = new Font("Goudy Stout", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            الأقساطbtn.ForeColor = Color.WhiteSmoke;
-            الأقساطbtn.Image = Properties.Resources.instalment;
-            الأقساطbtn.ImageAlign = ContentAlignment.MiddleLeft;
-            الأقساطbtn.Location = new Point(3, 192);
-            الأقساطbtn.Name = "الأقساطbtn";
-            الأقساطbtn.Size = new Size(217, 105);
-            الأقساطbtn.TabIndex = 1;
-            الأقساطbtn.Text = "  الأقساط";
-            الأقساطbtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            الأقساطbtn.UseVisualStyleBackColor = true;
-            الأقساطbtn.Click += الأقساطbtn_Click;
+            InstallmentsBtn.FlatAppearance.BorderSize = 0;
+            InstallmentsBtn.FlatStyle = FlatStyle.Flat;
+            InstallmentsBtn.Font = new Font("Goudy Stout", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            InstallmentsBtn.ForeColor = Color.WhiteSmoke;
+            InstallmentsBtn.Image = Properties.Resources.instalment;
+            InstallmentsBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            InstallmentsBtn.Location = new Point(3, 182);
+            InstallmentsBtn.Name = "InstallmentsBtn";
+            InstallmentsBtn.Size = new Size(217, 100);
+            InstallmentsBtn.TabIndex = 1;
+            InstallmentsBtn.Text = "  الأقساط";
+            InstallmentsBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            InstallmentsBtn.UseVisualStyleBackColor = true;
+            InstallmentsBtn.Click += InstallmentsBtn_Click;
             // 
             // mainpanel
             // 
             mainpanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             mainpanel.BackColor = SystemColors.ControlLight;
             mainpanel.BackgroundImageLayout = ImageLayout.Stretch;
-            mainpanel.Location = new Point(220, 76);
+            mainpanel.Location = new Point(220, 72);
             mainpanel.Name = "mainpanel";
-            mainpanel.Size = new Size(1147, 671);
+            mainpanel.Size = new Size(1147, 637);
             mainpanel.TabIndex = 1;
-            mainpanel.Paint += mainpanel_Paint;
+            mainpanel.Paint += MainPanel_Paint;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1367, 747);
+            ClientSize = new Size(1367, 710);
             Controls.Add(mainpanel);
             Controls.Add(panel2);
             Controls.Add(headerPanel);
@@ -307,9 +307,9 @@
 
         private Panel headerPanel;
         private Panel panel2;
-        private Button الأقساطbtn;
-        private Button الخزنةbtn;
-        private Button اليوميةbtn;
+        private Button InstallmentsBtn;
+        private Button SafeBtn;
+        private Button LedgerBtn;
         private Button minimize_btn;
         private Button maxmize_btn;
         private Panel mainpanel;
@@ -318,7 +318,7 @@
         private Label label1;
         private Button colse_btn;
         public Label title_text;
-        private Button عملاءBtn;
+        private Button CustomersBtn;
         private Button التقاريرbtn;
         private Button button1;
     }

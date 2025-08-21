@@ -1,10 +1,11 @@
 ﻿using HappyHouse_Server.Data;
 using HappyHouse_Server.Models;
+using HappyHouse_Server.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace HappyHouse_Server.Services
 {
-    public class LedgerService
+    public class LedgerService : ILedgerService
     {
         private readonly HappyHouseDbContext _context;
 
@@ -42,11 +43,18 @@ namespace HappyHouse_Server.Services
             {
                 ledger.Income = 0;
                 ledger.Expense = 0;
-                var transactions = _context.Transactions.Where(x => x.LedgerId == ledger.LedgerId);
+                //var transactions = _context.Transactions.Where(x => x.LedgerId == ledger.LedgerId);
+                var transactions = _context.Transactions.Where(x => x.LedgerId == ledger.LedgerId)
+                    .Select(t => new
+                    {
+                        LedgerId = t.LedgerId,
+                        Type = t.Type,
+                        Amount = t.Amount
+                    });
                 foreach (var transaction in transactions)
                 {
                     if (transaction.Type == "دخل")
-                    ledger.Income += transaction.Amount;
+                        ledger.Income += transaction.Amount;
                     else if (transaction.Type == "مصروفات")
                         ledger.Expense += transaction.Amount;
                 }
@@ -55,7 +63,7 @@ namespace HappyHouse_Server.Services
             {
                 var ledger = ledgers[i];
                 var led = ledgers[i - 1];
-                ledgers[i-1].Balance = ledgers[i].Balance + ledgers[i-1].Income - ledgers[i-1].Expense;
+                ledgers[i - 1].Balance = ledgers[i].Balance + ledgers[i - 1].Income - ledgers[i - 1].Expense;
             }
 
             await _context.SaveChangesAsync();

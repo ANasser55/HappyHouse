@@ -88,3 +88,4 @@ C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\obj\Debug\net8.0\Ha
 C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\obj\Debug\net8.0\HappyHouse_Server.genruntimeconfig.cache
 C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\obj\Debug\net8.0\ref\HappyHouse_Server.dll
 C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\obj\Debug\net8.0\HappyHouse_Server.sourcelink.json
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_BackEnd\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

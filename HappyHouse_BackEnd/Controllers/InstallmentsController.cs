@@ -1,5 +1,4 @@
-﻿using HappyHouse_Server.Services;
-using Microsoft.AspNetCore.Http;
+﻿using HappyHouse_Server.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HappyHouse_Server.Controllers
@@ -8,9 +7,9 @@ namespace HappyHouse_Server.Controllers
     [ApiController]
     public class InstallmentsController : ControllerBase
     {
-        private readonly InstallmentsService _installmentsService;
+        private readonly IInstallmentsService _installmentsService;
 
-        public InstallmentsController(InstallmentsService installmentsService)
+        public InstallmentsController(IInstallmentsService installmentsService)
         {
             _installmentsService = installmentsService;
         }

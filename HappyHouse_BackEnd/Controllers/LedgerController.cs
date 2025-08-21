@@ -1,5 +1,4 @@
-﻿using HappyHouse_Server.Services;
-using Microsoft.AspNetCore.Http;
+﻿using HappyHouse_Server.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HappyHouse_Server.Controllers
@@ -8,9 +7,9 @@ namespace HappyHouse_Server.Controllers
     [ApiController]
     public class LedgerController : ControllerBase
     {
-        private readonly LedgerService _ledgerService;
+        private readonly ILedgerService _ledgerService;
 
-        public LedgerController(LedgerService ledgerService)
+        public LedgerController(ILedgerService ledgerService)
         {
             _ledgerService = ledgerService;
         }
