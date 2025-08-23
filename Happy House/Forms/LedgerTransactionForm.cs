@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace HappyHouse_Client
 {
-    public partial class ledger_transaction_form : Form
+    public partial class LedgerTransactionForm : Form
     {
-        public ledger_transaction_form()
+        public LedgerTransactionForm()
         {
             InitializeComponent();
         }
 
         private void ledكاشbtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).loadform(new ledger_cash_form());
+            ((MainForm)this.ParentForm).loadform(new LedgerCashForm());
         }
 
         private void ledأقساطbtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).loadform(new ledger_installments());
+            ((MainForm)this.ParentForm).loadform(new LedgerInstallmentsForm());
         }
 
         private void ledger_transaction_form_Resize(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace HappyHouse_Client
 
         private void ledمصروفاتbtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).loadform(new ledger_expenses_form());
+            ((MainForm)this.ParentForm).loadform(new LedgerExpensesForm());
         }
     }
 }

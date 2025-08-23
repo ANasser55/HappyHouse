@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace HappyHouse_Client
 {
-    public partial class ledger_cash_form : Form
+    public partial class LedgerCashForm : Form
     {
-        public ledger_cash_form()
+        public LedgerCashForm()
         {
             InitializeComponent();
             cashDateTimePicker.Value = DateTime.Now;
@@ -22,7 +22,7 @@ namespace HappyHouse_Client
 
         private void عودةbtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).loadform(new ledger_transaction_form());
+            ((MainForm)this.ParentForm).loadform(new LedgerTransactionForm());
         }
 
         private void cashAmountTextBox_Leave(object sender, EventArgs e)

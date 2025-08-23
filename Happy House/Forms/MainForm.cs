@@ -1,16 +1,17 @@
 ﻿namespace HappyHouse_Client
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        private int x = 0;
+        private Point mouseLocation;
+        //private int oldTitleX = 0;
+        //private int oldTitleWidth = 0;
+
+        public MainForm()
         {
             InitializeComponent();
         }
 
-        int x = 0;
-        public Point mouse_location;
-        public int oldTitleX = 0;
-        public int oldTitleWidth = 0;
 
         public void loadform(object Form)
         {
@@ -84,7 +85,7 @@
             SafeBtn.BackColor = Color.FromArgb(14, 52, 65);
 
 
-            loadform(new ledger_form());
+            loadform(new LedgerForm());
         }
 
         private void SafeBtn_Click(object sender, EventArgs e)
@@ -108,7 +109,7 @@
             if (x == 0)
             {
                 x = 1;
-                loadform(new home_form());
+                loadform(new HomeForm());
             }
 
         }
@@ -136,7 +137,7 @@
 
         private void headerPanel_MouseDown(object sender, MouseEventArgs e)
         {
-            mouse_location = new Point(-e.X - 220, -e.Y);
+            mouseLocation = new Point(-e.X - 220, -e.Y);
 
         }
 
@@ -145,7 +146,7 @@
             if (e.Button == MouseButtons.Left)
             {
                 Point mouse_position = Control.MousePosition;
-                mouse_position.Offset(mouse_location.X, mouse_location.Y);
+                mouse_position.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mouse_position;
             }
         }

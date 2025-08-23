@@ -210,7 +210,7 @@ namespace HappyHouse_Client
         {
             if (isFirst)
             {
-                ((Form1)this.ParentForm).ChangeTitle("الأقساط المسجلة على العميل");
+                ((MainForm)this.ParentForm).ChangeTitle("الأقساط المسجلة على العميل");
                 isFirst = false;
                 xBtn.Visible = true;
                 DataGridView dataGridView = (DataGridView)sender;
@@ -231,7 +231,7 @@ namespace HappyHouse_Client
         private void month_installments_btn_Click(object sender, EventArgs e)
         {
 
-            ((Form1)this.ParentForm).ChangeTitle("أقساط الشهر الحالي");
+            ((MainForm)this.ParentForm).ChangeTitle("أقساط الشهر الحالي");
 
             async void MonthInstallmentsHandler()
             {
@@ -244,7 +244,7 @@ namespace HappyHouse_Client
 
         private void xBtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).ChangeTitle("الأقساط");
+            ((MainForm)this.ParentForm).ChangeTitle("الأقساط");
             isFirst = true;
             xBtn.Visible = false;
             searchTextBox.Text = "";
@@ -256,8 +256,8 @@ namespace HappyHouse_Client
 
         private void new_insta_btn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).ChangeTitle("قسط جديد");
-            ((Form1)this.ParentForm).loadform(new new_installment_form());
+            ((MainForm)this.ParentForm).ChangeTitle("قسط جديد");
+            ((MainForm)this.ParentForm).loadform(new new_installment_form());
         }
 
         private void customersInstallmentsDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

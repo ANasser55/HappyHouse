@@ -4,28 +4,31 @@
     <Compile Update="Forms\customers_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Form1.cs">
+    <Compile Update="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\home_form.cs">
+    <Compile Update="Forms\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\instalment_form.cs">
+    <Compile Update="Forms\InstalmentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ledger_cash_form.cs">
+    <Compile Update="Forms\LedgerCashForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ledger_expenses_form.cs">
+    <Compile Update="Forms\LedgerExpensesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ledger_form.cs">
+    <Compile Update="Forms\LedgerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ledger_installments.cs">
+    <Compile Update="Forms\LedgerInstallmentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ledger_transaction_form.cs">
+    <Compile Update="Forms\LedgerTransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\new_customer_form.cs">

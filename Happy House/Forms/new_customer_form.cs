@@ -398,7 +398,7 @@ namespace HappyHouse_Client
 
                     MessageBox.Show(InstallmentDateTimePicker.Value.ToString("تم اضافة " + nameTextBox.Text + " بنجاح"));
 
-                    ((Form1)this.ParentForm).loadform(new new_customer_form());
+                    ((MainForm)this.ParentForm).loadform(new new_customer_form());
 
 
                 }
@@ -419,8 +419,8 @@ namespace HappyHouse_Client
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).ChangeTitle("العملاء");
-            ((Form1)this.ParentForm).loadform(new customers_form());
+            ((MainForm)this.ParentForm).ChangeTitle("العملاء");
+            ((MainForm)this.ParentForm).loadform(new customers_form());
         }
 
 

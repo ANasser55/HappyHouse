@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace HappyHouse_Client
 {
-    public partial class ledger_installments : Form
+    public partial class LedgerInstallmentsForm : Form
     {
 
         // Variables
@@ -24,7 +24,7 @@ namespace HappyHouse_Client
         //
         //
         // Functions
-        public ledger_installments()
+        public LedgerInstallmentsForm()
         {
             InitializeComponent();
 
@@ -158,7 +158,7 @@ namespace HappyHouse_Client
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).loadform(new ledger_transaction_form());
+            ((MainForm)this.ParentForm).loadform(new LedgerTransactionForm());
         }
 
         private void addBtn_Click(object sender, EventArgs e)
@@ -179,7 +179,7 @@ namespace HappyHouse_Client
 
                     MessageBox.Show("تمت الإضافة بنجاح");
 
-                    ((Form1)this.ParentForm).loadform(new ledger_installments());
+                    ((MainForm)this.ParentForm).loadform(new LedgerInstallmentsForm());
                 }
             }
             else

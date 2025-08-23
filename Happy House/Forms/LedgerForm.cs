@@ -4,13 +4,13 @@ using Newtonsoft.Json;
 
 namespace HappyHouse_Client
 {
-    public partial class ledger_form : Form
+    public partial class LedgerForm : Form
     {
         private readonly HttpClient httpClient = new HttpClient();
 
         bool isSearch = true;
         bool isFirst = true;
-        public ledger_form()
+        public LedgerForm()
         {
             InitializeComponent();
             dateTimePicker1.Value = DateTime.Now;
@@ -168,7 +168,7 @@ namespace HappyHouse_Client
 
         private void ledعملية_جديدةbtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).loadform(new ledger_transaction_form());
+            ((MainForm)this.ParentForm).loadform(new LedgerTransactionForm());
         }
 
         private void ledgerDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

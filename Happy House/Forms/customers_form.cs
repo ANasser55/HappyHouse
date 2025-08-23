@@ -169,7 +169,7 @@ namespace HappyHouse_Client
             {
                 if (isFirst)
                 {
-                    ((Form1)this.ParentForm).ChangeTitle("سجل معاملات العميل");
+                    ((MainForm)this.ParentForm).ChangeTitle("سجل معاملات العميل");
                     isFirst = false;
                     xBtn.Visible = true;
 
@@ -189,8 +189,8 @@ namespace HappyHouse_Client
 
         private void newCustomerBtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).ChangeTitle("عميل جديد");
-            ((Form1)this.ParentForm).loadform(new new_customer_form());
+            ((MainForm)this.ParentForm).ChangeTitle("عميل جديد");
+            ((MainForm)this.ParentForm).loadform(new new_customer_form());
         }
 
         private void xBtn_Click(object sender, EventArgs e)
@@ -198,7 +198,7 @@ namespace HappyHouse_Client
             isFirst = true;
             xBtn.Visible = false;
             searchTextBox.Text = "";
-            ((Form1)this.ParentForm).ChangeTitle("العملاء");
+            ((MainForm)this.ParentForm).ChangeTitle("العملاء");
 
             LoadCustomersAsync();
         }

@@ -12,6 +12,7 @@ namespace HappyHouse_Server.Data
         public DbSet<Debtor> Debtors { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Ledger> Ledgers { get; set; }
+        public DbSet<Account> Accounts { get; set; }
 
 
         public HappyHouseDbContext(DbContextOptions<HappyHouseDbContext> options)
@@ -28,6 +29,7 @@ namespace HappyHouse_Server.Data
             modelBuilder.Entity<Debtor>().ToTable("debtors").HasKey(x => x.DebtorId);
             modelBuilder.Entity<Transaction>().ToTable("transactions").HasKey(x => x.TransactionId);
             modelBuilder.Entity<Ledger>().ToTable("ledger").HasKey(x => x.LedgerId);
+            modelBuilder.Entity<Account>().ToTable("accounts").HasKey(x => x.AccountId);
 
             modelBuilder.Entity<Customer>().Property(c => c.CustomerId).HasColumnName("customer_id");
             modelBuilder.Entity<Customer>().Property(c => c.CustomerName).HasColumnName("customer_name");
@@ -70,6 +72,10 @@ namespace HappyHouse_Server.Data
             modelBuilder.Entity<Ledger>().Property(l => l.Expense).HasColumnName("expense");
             modelBuilder.Entity<Ledger>().Property(l => l.Balance).HasColumnName("balance");
 
+            modelBuilder.Entity<Account>().Property(ac => ac.AccountId).HasColumnName("account_id");
+            modelBuilder.Entity<Account>().Property(ac => ac.Username).HasColumnName("user_name");
+            modelBuilder.Entity<Account>().Property(ac => ac.Email).HasColumnName("email");
+            modelBuilder.Entity<Account>().Property(ac => ac.Password).HasColumnName("password");
 
         }
 

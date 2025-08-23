@@ -1,4 +1,7 @@
-namespace HappyHouse_Client.Old
+
+using HappyHouse_Client.Forms;
+
+namespace HappyHouse_Client
 {
     internal static class Program
     {
@@ -11,7 +14,7 @@ namespace HappyHouse_Client.Old
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new LogInForm());
         }
     }
 }

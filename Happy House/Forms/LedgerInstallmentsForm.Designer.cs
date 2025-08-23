@@ -1,6 +1,6 @@
 ﻿namespace HappyHouse_Client
 {
-    partial class ledger_installments
+    partial class LedgerInstallmentsForm
     {
         /// <summary>
         /// Required designer variable.

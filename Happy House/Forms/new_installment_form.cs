@@ -379,7 +379,7 @@ namespace HappyHouse_Client
 
                     MessageBox.Show(dateTimePicker1.Value.ToString("تم اضافة القسط بنجاح "));
 
-                    ((Form1)this.ParentForm).loadform(new new_installment_form());
+                    ((MainForm)this.ParentForm).loadform(new new_installment_form());
 
                 }
 
@@ -394,8 +394,8 @@ namespace HappyHouse_Client
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).ChangeTitle("الأقساط");
-            ((Form1)this.ParentForm).loadform(new Installment_form());
+            ((MainForm)this.ParentForm).ChangeTitle("الأقساط");
+            ((MainForm)this.ParentForm).loadform(new Installment_form());
         }
 
         private void new_installment_form_Click(object sender, EventArgs e)

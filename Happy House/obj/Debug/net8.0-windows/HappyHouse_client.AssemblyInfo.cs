@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HappyHouse_Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb02576fd7a3ced22a3486213ba1bccb854aba5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bcaaf67991c971afdfb5f869023c01df0055abc")]
 [assembly: System.Reflection.AssemblyProductAttribute("HappyHouse_Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HappyHouse_Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

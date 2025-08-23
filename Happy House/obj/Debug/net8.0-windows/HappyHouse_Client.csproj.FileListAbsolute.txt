@@ -1,12 +1,5 @@
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.csproj.AssemblyReference.cache
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.customers_form.resources
-C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.Form1.resources
-C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.home_form.resources
-C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.ledger_cash_form.resources
-C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.ledger_expenses_form.resources
-C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.ledger_form.resources
-C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.ledger_installments.resources
-C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.ledger_transaction_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.new_customer_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.new_installment_form.resources
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.reports_form.resources
@@ -77,3 +70,11 @@ C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\r
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHou.32097F3B.Up2Date
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.sourcelink.json
 C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.installment_form.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.HomeForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerCashForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerExpensesForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerInstallmentsForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerTransactionForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.Forms.LogInForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.MainForm.resources

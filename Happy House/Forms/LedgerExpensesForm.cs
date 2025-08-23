@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace HappyHouse_Client
 {
-    public partial class ledger_expenses_form : Form
+    public partial class LedgerExpensesForm : Form
     {
-        public ledger_expenses_form()
+        public LedgerExpensesForm()
         {
             InitializeComponent();
 
@@ -61,7 +61,7 @@ namespace HappyHouse_Client
 
                 transactionDAO.AddExpensesTransaction(dateTimePicker1.Value.ToString("yyyy-MM-dd"), amount, descriptionTextBox.Text);
 
-                ((Form1)this.ParentForm).loadform(new ledger_form());
+                ((MainForm)this.ParentForm).loadform(new LedgerForm());
             }
             else
             {
@@ -71,7 +71,7 @@ namespace HappyHouse_Client
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            ((Form1)this.ParentForm).loadform(new ledger_form());
+            ((MainForm)this.ParentForm).loadform(new LedgerForm());
         }
     }
 }

@@ -120,7 +120,7 @@
             new_insta_btn.UseVisualStyleBackColor = false;
             new_insta_btn.Click += new_insta_btn_Click;
             // 
-            // instalment_form
+            // Installment_form
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -134,7 +134,7 @@
             Controls.Add(customersInstallmentsDataGridView);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
-            Name = "instalment_form";
+            Name = "Installment_form";
             Text = "instalment_form";
             ((System.ComponentModel.ISupportInitialize)customersInstallmentsDataGridView).EndInit();
             ResumeLayout(false);

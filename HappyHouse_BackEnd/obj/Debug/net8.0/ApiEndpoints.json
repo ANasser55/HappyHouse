@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "HappyHouse_Server.Controllers.AuthenticationController",
+    "Method": "AuthenticateUser",
+    "RelativePath": "api/Authentication/authenticate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDTO",
+        "Type": "HappyHouse_Server.DTO.UserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HappyHouse_Server.Controllers.CustomerRegistrationController",
     "Method": "AddNewCustomer",
     "RelativePath": "api/CustomerRegistration",
