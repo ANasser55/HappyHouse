@@ -1,0 +1,160 @@
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.csproj.AssemblyReference.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.customers_form.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.Properties.Resources.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.csproj.GenerateResource.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.AssemblyInfoInputs.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.AssemblyInfo.cs
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.csproj.CoreCompileInputs.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\HappyHouse_Client.exe
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\HappyHouse_Client.deps.json
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\HappyHouse_Client.runtimeconfig.json
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\HappyHouse_Client.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\HappyHouse_Client.pdb
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\refint\HappyHouse_Client.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.pdb
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.genruntimeconfig.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\ref\HappyHouse_Client.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHou.32097F3B.Up2Date
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.sourcelink.json
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.installment_form.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.HomeForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerCashForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerExpensesForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerInstallmentsForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerTransactionForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.Forms.LogInForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.MainForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.NewCustomerForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.NewInstallmentForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.ReportsForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\Happy House\obj\Debug\net8.0-windows\HappyHouse_Client.SafeboxForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\HappyHouse_Client.exe
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\HappyHouse_Client.deps.json
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\HappyHouse_Client.runtimeconfig.json
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\HappyHouse_Client.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\HappyHouse_Client.pdb
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.csproj.AssemblyReference.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.customers_form.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.HomeForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.Installment_form.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerCashForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerExpensesForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerInstallmentsForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.LedgerTransactionForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.Forms.LogInForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.MainForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.NewCustomerForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.NewInstallmentForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.ReportsForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.SafeboxForm.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.Properties.Resources.resources
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.csproj.GenerateResource.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.AssemblyInfoInputs.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.AssemblyInfo.cs
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.csproj.CoreCompileInputs.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.sourcelink.json
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHou.32097F3B.Up2Date
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\refint\HappyHouse_Client.dll
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.pdb
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\HappyHouse_Client.genruntimeconfig.cache
+C:\Users\A.Nasser\source\repos\HappyHouse\HappyHouse_Client\obj\Debug\net8.0-windows\ref\HappyHouse_Client.dll

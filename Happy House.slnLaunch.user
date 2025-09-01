@@ -3,11 +3,11 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "HappyHouse_BackEnd\\HappyHouse_Server.csproj",
+        "Path": "HappyHouse_Client\\HappyHouse_Client.csproj",
         "Action": "Start"
       },
       {
-        "Path": "Happy House\\HappyHouse_Client.csproj",
+        "Path": "HappyHouse_Server\\HappyHouse_Server.csproj",
         "Action": "Start"
       }
     ]
