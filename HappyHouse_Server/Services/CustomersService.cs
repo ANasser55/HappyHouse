@@ -1,6 +1,5 @@
 ﻿using HappyHouse_Server.Data;
 using HappyHouse_Server.DTO;
-using HappyHouse_Server.Models;
 using HappyHouse_Server.Interfaces;
 using Microsoft.EntityFrameworkCore;
 

@@ -2,6 +2,7 @@
 using HappyHouse_Client.DTO;
 using HappyHouse_Client.Models;
 using Newtonsoft.Json;
+using System.Text;
 
 
 namespace HappyHouse_Client
@@ -10,7 +11,7 @@ namespace HappyHouse_Client
     {
         private HttpClient _client = new HttpClient();
         List<CustomerInstallmentsDTO> customers = new List<CustomerInstallmentsDTO>();
-        Transaction transaction = new Transaction();
+        InstallmentTransactionDTO transaction = new InstallmentTransactionDTO();
 
 
         public LedgerInstallmentsForm()
@@ -98,7 +99,8 @@ namespace HappyHouse_Client
         private void AddBtn_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(amountTextBox.Text) && !string.IsNullOrWhiteSpace(amountTextBox.Text)
-                && !string.IsNullOrEmpty(searchTextBox.Text) && !string.IsNullOrWhiteSpace(searchTextBox.Text))
+                && !string.IsNullOrEmpty(CustomerComboBox.Text) && !string.IsNullOrWhiteSpace(CustomerComboBox.Text)
+                && !string.IsNullOrEmpty(InstallmentComboBox.Text) && !string.IsNullOrWhiteSpace(InstallmentComboBox.Text))
             {
                 if (MessageBox.Show("الإسم: " + customers[CustomerComboBox.SelectedIndex].CustomerName + "\n"
                                     + "رقم القسط: " + customers[CustomerComboBox.SelectedIndex].Installments[InstallmentComboBox.SelectedIndex].InstallmentId + "\n"
@@ -108,17 +110,42 @@ namespace HappyHouse_Client
                     string amountTxt = amountTextBox.Text.Replace("EGP", "").Replace(".00", "").Trim();
                     decimal amount = decimal.Parse(amountTxt);
 
-                    //    TransactionDAO transactionDAO = new TransactionDAO();
-                    //    transactionDAO.AddInstallmentTransaction(customer_name, dateTimePicker1.Value.ToString("yyyy-MM-dd"), customer_id, installment_id, amount, string.IsNullOrEmpty(richTextBox1.Text) ? " " : richTextBox1.Text);
+                    transaction.Amount = amount;
+                    transaction.Date = dateTimePicker1.Value;
+                    transaction.TransactionType = 
+                    transaction.Description = richTextBox1.Text;
 
-                    //    MessageBox.Show("تمت الإضافة بنجاح");
+                    async void Handle()
+                    {
+                        await AddInstallmentTransaction();
+                    }
 
-                    //    ((MainForm)this.ParentForm).loadform(new LedgerInstallmentsForm());
+                    Handle();
+
                 }
             }
             else
             {
                 MessageBox.Show("يرجى إدخال البيانات أولا");
+            }
+        }
+
+        private async Task AddInstallmentTransaction()
+        {
+            var url = "https://localhost:7176/api/Transactions/Installment";
+
+            try
+            {
+                _client.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", SessionManager.Token);
+
+                var json = JsonConvert.SerializeObject(transaction);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage message = await _client.PostAsync(url, content);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
 
@@ -132,6 +159,7 @@ namespace HappyHouse_Client
                 InstallmentComboBox.Items.Add($" الوصف: {customer.Installments[i].Description} | قيمة القسط: {customer.Installments[i].PaymentPerMonth}");
             }
             transaction.CustomerId = customer.CustomerID;
+            transaction.TransactorName = customer.CustomerName;
         }
 
         private void InstallmentComboBox_SelectedIndexChanged(object sender, EventArgs e)

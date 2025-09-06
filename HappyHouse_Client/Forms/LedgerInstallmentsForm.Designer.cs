@@ -200,7 +200,6 @@
         private RichTextBox richTextBox1;
         private DataGridView customersLedgerDataGridView;
         private DateTimePicker dateTimePicker1;
-        private TextBox searchTextBox;
         private Button xBtn;
         private ComboBox CustomerComboBox;
         private ComboBox InstallmentComboBox;

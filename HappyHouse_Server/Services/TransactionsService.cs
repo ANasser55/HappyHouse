@@ -29,7 +29,7 @@ namespace HappyHouse_Server.Services
         public async Task<List<CashTransactionDTO>> GetLedgerTransactionsAsync(int id)
         {
             var transactions = await _context.Transactions.Where(x => x.LedgerId == id)
-                .Select(t =>  new CashTransactionDTO
+                .Select(t => new CashTransactionDTO
                 {
                     TransactorName = t.TransactorName,
                     Date = t.Date,
@@ -80,16 +80,16 @@ namespace HappyHouse_Server.Services
             }
         }
 
-        public async Task<int> AddInstallmentTransaction(InstallmentTransactionDTO installment)
+        public async Task<int> AddInstallmentTransaction(InstallmentTransactionDTO iTransaction)
         {
             var dbTransaction = _context.Database.BeginTransaction();
 
             try
             {
-                var ledger = _context.Ledgers.FirstOrDefault(x => x.Date.Date == installment.Date.Date);
+                var ledger = _context.Ledgers.FirstOrDefault(x => x.Date.Date == iTransaction.Date.Date);
                 if (ledger == null)
                 {
-                    ledger = new Ledger { Date = installment.Date };
+                    ledger = new Ledger { Date = iTransaction.Date };
                     await _context.Ledgers.AddAsync(ledger);
                     await _context.SaveChangesAsync();
                 }
@@ -97,16 +97,29 @@ namespace HappyHouse_Server.Services
                 var tansaction = new Transaction
                 {
                     LedgerId = ledger.LedgerId,
-                    CustomerId = installment.CustomerId,
-                    InstallmentId = installment.InstallmentId,
-                    TransactorName = installment.TransactorName,
-                    Date = installment.Date,
-                    Amount = installment.Amount,
+                    CustomerId = iTransaction.CustomerId,
+                    InstallmentId = iTransaction.InstallmentId,
+                    TransactorName = iTransaction.TransactorName,
+                    Date = iTransaction.Date,
+                    Amount = iTransaction.Amount,
                     IsExpense = false,
-                    Description = installment.Description,
+                    Description = iTransaction.Description,
                 };
-                await _context.Transactions.AddAsync(tansaction);
 
+                await _context.Transactions.AddAsync(tansaction);
+                await _context.SaveChangesAsync();
+
+                var installment = _context.Installments.FirstOrDefault(x => x.InstallmentId == iTransaction.InstallmentId);
+                installment.RemainingAmount = installment.RemainingAmount - iTransaction.Amount;
+                if (installment.DueDate.Date > DateTime.Now.Date)
+                {
+                    installment.isPaid = true;
+                }
+                else
+                {
+                    installment.DueDate = installment.DueDate.AddMonths(1);
+                    installment.isPaid = false;
+                }
                 await _context.SaveChangesAsync();
 
                 await dbTransaction.CommitAsync();
