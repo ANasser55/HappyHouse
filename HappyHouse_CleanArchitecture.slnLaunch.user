@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "HappyHouse.API\\HappyHouse.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "HappyHouse.Client\\HappyHouse.Client.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
