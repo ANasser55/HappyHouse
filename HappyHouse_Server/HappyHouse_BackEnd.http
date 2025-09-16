@@ -1,6 +1,0 @@
-@HappyHouse_BackEnd_HostAddress = http://localhost:5027
-
-GET {{HappyHouse_BackEnd_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
