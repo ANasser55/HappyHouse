@@ -113,7 +113,7 @@ namespace HappyHouse_Client
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
-                var transactions = JsonConvert.DeserializeObject<List<Transaction>>(responseBody);
+                var transactions = JsonConvert.DeserializeObject<List<CustomerTransactionDTO>>(responseBody);
                 if (transactions.IsNullOrEmpty())
                 {
                     MessageBox.Show("لا توجد معاملات لهذا العميل");
@@ -124,7 +124,7 @@ namespace HappyHouse_Client
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-                customersDataGridView.DataSource = new List<Transaction>();
+                customersDataGridView.DataSource = new List<CustomerTransactionDTO>();
             }
 
         }
@@ -135,7 +135,6 @@ namespace HappyHouse_Client
 
             if (isFirst)
             {   
-                //customersDataGridView.Columns["CustomerId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["CustomerName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["Phone"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["RemainingAmount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -143,7 +142,6 @@ namespace HappyHouse_Client
                 customersDataGridView.Columns["DueThisMonth"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
                 customersDataGridView.Columns["CustomerId"].Visible = false;
-                //customersDataGridView.Columns["CustomerId"].HeaderText = "كود العميل";
                 customersDataGridView.Columns["CustomerName"].HeaderText = "إسم العميل";
                 customersDataGridView.Columns["Phone"].HeaderText = "هاتف العميل";
                 customersDataGridView.Columns["RemainingAmount"].HeaderText = "المتبقي على العميل";
@@ -157,12 +155,7 @@ namespace HappyHouse_Client
                 customersDataGridView.Columns["Amount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 customersDataGridView.Columns["Description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                customersDataGridView.Columns["TransactionId"].Visible = false;
-                customersDataGridView.Columns["InstallmentId"].Visible = false;
-                customersDataGridView.Columns["LedgerId"].Visible = false;
-                customersDataGridView.Columns["CustomerId"].Visible = false;
-                customersDataGridView.Columns["DebtorId"].Visible = false;
-                //customersDataGridView.Columns["Type"].Visible = false;
+
                 customersDataGridView.Columns["TransactorName"].HeaderText = "إسم العميل";
                 customersDataGridView.Columns["Date"].HeaderText = "التاريخ";
                 customersDataGridView.Columns["Date"].DefaultCellStyle.Format = "dd/MM/yyyy";

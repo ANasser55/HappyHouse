@@ -15,13 +15,20 @@ namespace HappyHouse.Application.Services
         }
 
 
-        public async Task<IEnumerable<Transaction>> GetCustomerTransactionsAsync(int id)
+        public async Task<IEnumerable<CustomerTransactionDTO>> GetCustomerTransactionsAsync(int id)
         {
             //var transactions = await _context.Transactions.Where(x => x.CustomerId == id).ToListAsync();
             //return transactions;
 
             var transactions =  await _repository.GetCustomerTransactionsAsync(id);
-            return transactions;
+            var transactionDTO = transactions.Select(t => new CustomerTransactionDTO
+            {
+                TransactorName = t.TransactorName,
+                Date = t.Date,
+                Amount = t.Amount,
+                Description = t.Description,
+            }).ToList();
+            return transactionDTO;
         }
 
         public async Task<IEnumerable<CashTransactionDTO>> GetLedgerTransactionsAsync(int id)
